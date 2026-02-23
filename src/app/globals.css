@@ -1,26 +1,275 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   BANYAN GLOBAL LEARNING — globals.css  (Tailwind v4)
+   Place at: src/app/globals.css
+   ──────────────────────────────────────────────────────────────────────────── */
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── DESIGN TOKENS ──────────────────────────────────────────────────────────
+   In Tailwind v4, @theme replaces tailwind.config.ts.
+   Colors here become utility classes: bg-blue-600, text-gold-400, etc.
+   Fonts here reference CSS vars injected by next/font (--font-display-var etc.)
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@theme {
+
+  /* ── Brand Blue ─────────────────────────────────────────────────────────── */
+  --color-blue-50:  #eff5fb;
+  --color-blue-100: #d6e5f5;
+  --color-blue-200: #aecde9;
+  --color-blue-300: #7aabd8;
+  --color-blue-400: #4586c3;
+  --color-blue-500: #2068aa;
+  --color-blue-600: #0e4a83;   /* ← Primary brand blue */
+  --color-blue-700: #0b3b69;
+  --color-blue-800: #082c50;
+  --color-blue-900: #051e36;
+  --color-blue-950: #030f1e;
+
+  /* ── Gold ────────────────────────────────────────────────────────────────── */
+  --color-gold-50:  #fdf6e3;
+  --color-gold-100: #f9e9bb;
+  --color-gold-200: #f3d489;
+  --color-gold-300: #edbc4e;
+  --color-gold-400: #e5a025;   /* ← Primary gold */
+  --color-gold-500: #c9861a;
+  --color-gold-600: #a86c14;
+  --color-gold-700: #83520f;
+  --color-gold-800: #5e3c0b;
+  --color-gold-900: #3c2608;
+
+  /* ── Teal (GLL color) ────────────────────────────────────────────────────── */
+  --color-teal-50:  #e8f8f6;
+  --color-teal-100: #c3ede9;
+  --color-teal-200: #85d9d2;
+  --color-teal-300: #44c1b9;
+  --color-teal-400: #1ca59d;   /* ← Primary teal */
+  --color-teal-500: #0d8a7d;
+  --color-teal-600: #0a6e64;
+  --color-teal-700: #07524b;
+  --color-teal-800: #053832;
+  --color-teal-900: #031e1b;
+
+  /* ── Neutral ─────────────────────────────────────────────────────────────── */
+  --color-neutral-50:  #f8f9fa;
+  --color-neutral-100: #f1f3f5;
+  --color-neutral-200: #e9ecef;
+  --color-neutral-300: #dee2e6;
+  --color-neutral-400: #ced4da;
+  --color-neutral-500: #adb5bd;
+  --color-neutral-600: #868e96;
+  --color-neutral-700: #495057;
+  --color-neutral-800: #343a40;
+  --color-neutral-900: #212529;
+  --color-neutral-950: #0d1117;
+
+  /* ── Fonts ───────────────────────────────────────────────────────────────── */
+  /* next/font injects --font-display-var and --font-body-var on <html>        */
+  --font-display: var(--font-display-var), "Plus Jakarta Sans", sans-serif;
+  --font-body:    var(--font-body-var),    "Inter",             sans-serif;
+  --font-sans:    var(--font-body-var),    "Inter",             sans-serif;
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --spacing-section:    6rem;
+  --spacing-section-sm: 4rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── BASE ────────────────────────────────────────────────────────────────────
+   Applied globally after Tailwind's preflight reset.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-neutral-900);
+    background-color: white;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-blue-200);
+    color: var(--color-blue-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue-400);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* ── COMPONENTS ──────────────────────────────────────────────────────────────
+   Reusable classes. Use @apply with standard Tailwind v4 utilities.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@layer components {
+
+  /* Layout */
+  .container-site {
+    @apply mx-auto w-full px-5 sm:px-8 lg:px-10;
+    max-width: 1280px;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  /* Section eyebrow label */
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.1em] uppercase text-blue-600;
+  }
+
+  /* ── Typography scale ── */
+  .display-xl {
+    font-family: var(--font-display);
+    @apply text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none;
+  }
+  .display-lg {
+    font-family: var(--font-display);
+    @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight;
+  }
+  .display-md {
+    font-family: var(--font-display);
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+  .display-sm {
+    font-family: var(--font-display);
+    @apply text-2xl sm:text-3xl font-bold;
+  }
+  .body-lg  { @apply text-lg leading-relaxed; }
+  .body-md  { @apply text-base leading-relaxed; }
+  .body-sm  { @apply text-sm leading-relaxed text-neutral-600; }
+
+  /* ── Buttons ── */
+  .btn {
+    font-family: var(--font-display);
+    @apply inline-flex items-center gap-2 font-semibold rounded-lg
+           transition-all duration-200 cursor-pointer
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap;
+  }
+
+  .btn-sm  { @apply px-4 py-2 text-sm; }
+  .btn-md  { @apply px-5 py-2.5 text-sm; }
+  .btn-lg  { @apply px-6 py-3 text-base; }
+  .btn-xl  { @apply px-8 py-4 text-lg font-bold; }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-md
+           focus-visible:ring-blue-500;
+  }
+  .btn-gold {
+    @apply bg-gold-400 text-white hover:bg-gold-500 shadow-sm hover:shadow-md
+           focus-visible:ring-gold-400;
+  }
+  .btn-teal {
+    @apply bg-teal-400 text-white hover:bg-teal-500 shadow-sm hover:shadow-md
+           focus-visible:ring-teal-400;
+  }
+  .btn-white {
+    @apply bg-white text-blue-700 hover:bg-blue-50 shadow-sm hover:shadow-md
+           focus-visible:ring-blue-400;
+  }
+  .btn-outline {
+    @apply bg-transparent text-blue-600 border border-blue-600
+           hover:bg-blue-50 focus-visible:ring-blue-500;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-blue-200 hover:text-white hover:bg-white/10
+           focus-visible:ring-white/50;
+  }
+
+  /* ── Badges ── */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full
+           text-xs font-semibold;
+  }
+  .badge-blue    { @apply bg-blue-100 text-blue-700; }
+  .badge-gold    { @apply bg-gold-100 text-gold-700; }
+  .badge-teal    { @apply bg-teal-100 text-teal-700; }
+  .badge-neutral { @apply bg-neutral-100 text-neutral-600; }
+  .badge-white   { @apply bg-white/20 text-white; }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white rounded-xl border border-neutral-200 overflow-hidden
+           transition-shadow duration-200 hover:shadow-lg;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .card-accent {
+    @apply h-1 w-full;
+  }
+
+  /* ── Navigation ── */
+  .nav-link {
+    font-family: var(--font-display);
+    @apply text-[15px] font-medium text-neutral-600 hover:text-blue-600
+           transition-colors duration-150;
+  }
+
+  /* ── Hero backgrounds ── */
+  .hero-main {
+    background: linear-gradient(135deg, #051e38 0%, #0e4a83 60%, #0f605a 100%);
+  }
+  .hero-gll {
+    background: linear-gradient(135deg, #07524b 0%, #1ca59d 100%);
+  }
+  .hero-aipd {
+    background: #0d1117;
+  }
+  .hero-ll {
+    background: linear-gradient(135deg, #83520f 0%, #e5a025 100%);
+  }
+
+  /* ── Form inputs ── */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-neutral-300 bg-white
+           text-neutral-900 text-sm placeholder:text-neutral-400
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           transition-shadow duration-150;
+  }
+
+  /* ── Stat numbers ── */
+  .stat-number {
+    font-family: var(--font-display);
+    @apply text-5xl lg:text-6xl font-extrabold tracking-tight;
+  }
+}
+
+
+/* ── UTILITIES ───────────────────────────────────────────────────────────────
+   One-off helpers that extend Tailwind's utility layer.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #4586c3, #0e4a83);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #edbc4e, #e5a025);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
