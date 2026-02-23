@@ -13,15 +13,16 @@ export default function HeroHome() {
   return (
     <section className="relative text-white overflow-hidden">
 
-      {/* ── Layer 1: Background photo ─────────────────────────────────────── */}
-      {/* Replace this URL with your own image when ready                      */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://picsum.photos/seed/classroom2024/1600/900')",
-        }}
-      />
+      {/* ── Layer 1: Background video ─────────────────────────────────────── */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/videos/hero-classroom.mp4" type="video/mp4" />
+      </video>
 
       {/* ── Layer 2: Brand gradient overlay — keeps text readable ─────────── */}
       <div
