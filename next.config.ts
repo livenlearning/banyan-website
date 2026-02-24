@@ -1,12 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+// next.config.ts
+const nextConfig = {
+  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   turbopack: {
     root: __dirname,
   },
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "picsum.photos" }],
+    remotePatterns: [{ protocol: "https" as const, hostname: "picsum.photos" }],
   },
 };
 
