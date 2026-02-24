@@ -5,7 +5,6 @@ import SiteFooter from '@/components/layout/SiteFooter'
 import {
   ArrowRight,
   MapPin,
-  Award,
   Users,
   Globe,
   GraduationCap,
@@ -28,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: 'Learning Live — Banyan\'s 17-Year Taipei Partnership',
   description:
-    'Since 2009, Banyan has delivered daily live sessions to Tsai Hsing Elementary School in Taipei, Taiwan. Over 5,000 students. CILC Pinnacle Award. Alumni at NYU, UW, and Ohio State.',
+    'Since 2009, Banyan has delivered daily live sessions to Tsai Hsing Elementary School in Taipei, Taiwan. Over 5,000 students and alumni at NYU, UW, and Ohio State.',
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -53,8 +52,8 @@ const timeline = [
   },
   {
     year: '2015',
-    title: 'CILC Pinnacle Award.',
-    body: 'The Center for Interactive Learning and Collaboration recognizes Learning Live with its Pinnacle Award — the highest distinction in virtual field trip and live distance learning programming.',
+    title: 'Program matures across grades.',
+    body: 'Daily sessions are now integrated across multiple grade levels with stronger curriculum sequencing, making Learning Live part of the school\'s long-term academic identity.',
   },
   {
     year: '2019',
@@ -99,6 +98,13 @@ const outcomes = [
     detail: 'Alumni accepted to NYU, University of Washington, Ohio State, and top international high schools and universities across Asia and the West.',
   },
 ]
+
+const tsaiHsingImages = {
+  schoolFront:
+    'https://banyangloballearning.com/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-1.16.18%E2%80%AFPM.png',
+  classroom:
+    'https://banyangloballearning.com/wp-content/uploads/2025/04/IMG_5294-scaled.jpeg',
+}
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
@@ -174,40 +180,31 @@ export default function LearningLivePage() {
         {/* ── PARTNER PROFILE BAND ──────────────────────────────────────── */}
         <section className="bg-amber-950 border-b border-amber-900">
           <div className="container-site py-10">
-            <div className="flex flex-wrap items-center gap-10 lg:gap-16">
-              <div className="flex items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-4 lg:gap-6">
+              <div className="flex items-center gap-3 shrink-0 rounded-xl border border-white/10 bg-black/10 px-4 py-3">
                 <div className="w-9 h-9 rounded-lg bg-gold-400/20 flex items-center justify-center">
                   <MapPin className="text-gold-400" size={17} />
                 </div>
                 <div>
-                  <div className="text-amber-500 text-xs font-semibold uppercase tracking-wide">Partner school</div>
+                  <div className="text-amber-300 text-xs font-semibold uppercase tracking-wide">Partner school</div>
                   <div className="text-white font-display font-semibold">Tsai Hsing Elementary, Taipei, Taiwan</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex items-center gap-3 shrink-0 rounded-xl border border-white/10 bg-black/10 px-4 py-3">
                 <div className="w-9 h-9 rounded-lg bg-gold-400/20 flex items-center justify-center">
                   <BookOpen className="text-gold-400" size={17} />
                 </div>
                 <div>
-                  <div className="text-amber-500 text-xs font-semibold uppercase tracking-wide">Founded</div>
+                  <div className="text-amber-300 text-xs font-semibold uppercase tracking-wide">Founded</div>
                   <div className="text-white font-display font-semibold">1949 · Wenshan District</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 shrink-0">
-                <div className="w-9 h-9 rounded-lg bg-gold-400/20 flex items-center justify-center">
-                  <Award className="text-gold-400" size={17} />
-                </div>
-                <div>
-                  <div className="text-amber-500 text-xs font-semibold uppercase tracking-wide">Recognition</div>
-                  <div className="text-white font-display font-semibold">CILC Pinnacle Award Winner</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex items-center gap-3 shrink-0 rounded-xl border border-white/10 bg-black/10 px-4 py-3">
                 <div className="w-9 h-9 rounded-lg bg-gold-400/20 flex items-center justify-center">
                   <Users className="text-gold-400" size={17} />
                 </div>
                 <div>
-                  <div className="text-amber-500 text-xs font-semibold uppercase tracking-wide">Partnership since</div>
+                  <div className="text-amber-300 text-xs font-semibold uppercase tracking-wide">Partnership since</div>
                   <div className="text-white font-display font-semibold">2009 · Grades 5–8</div>
                 </div>
               </div>
@@ -282,89 +279,69 @@ export default function LearningLivePage() {
           <div className="container-site">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-              {/* Left — narrative */}
-              <div>
-                <p className="section-label mb-4">The story</p>
-                <h2 className="display-md text-neutral-900 mb-7">
-                  A school that needed something the market couldn&apos;t give it.
-                </h2>
+                {/* Left — narrative */}
+                <div>
+                  <p className="section-label mb-4">The story</p>
+                  <h2 className="display-md text-neutral-900 mb-7">
+                    A school that needed something the market couldn&apos;t give it.
+                  </h2>
 
-                <div className="space-y-5 body-md text-neutral-700">
-                  <p>
-                    Tsai Hsing Elementary School was founded in 1949 in the Wenshan
-                    District of Taipei, Taiwan. For decades, it held a place among
-                    the city&apos;s most respected private institutions — known for
-                    academic rigor, character education, and a bilingual emphasis that
-                    set its students apart.
-                  </p>
-                  <p>
-                    In the early 2010s, the school faced a challenge familiar to
-                    many institutions: a period of over-investment in athletics had
-                    created a reputational drift from its academic identity. Leadership
-                    wanted to restore the school&apos;s core distinction — and elevate
-                    its English and global education program in a way that no local
-                    hire could deliver.
-                  </p>
-                  <p>
-                    The conventional answer — bring in expat teachers — had already
-                    proven inconsistent. Cultural gaps, high turnover, and the absence
-                    of a sustained curriculum meant results that varied year to year.
-                    What Tsai Hsing wanted wasn&apos;t better instruction. It was a
-                    different kind of learning entirely.
-                  </p>
-                  <p>
-                    In 2009, Banyan proposed Learning Live: daily, live virtual
-                    sessions with a trained educator, a structured curriculum, and
-                    real international connection built directly into the school day.
-                    Not a tool. Not a vendor. A partner.
-                  </p>
-                  <p className="font-medium text-neutral-900">
-                    Tsai Hsing said yes. That partnership is still running today.
-                  </p>
-                </div>
-              </div>
-
-              {/* Right — photo + credential */}
-              <div className="space-y-5">
-                {/* Main photo */}
-                <div
-                  className="rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-200 bg-cover bg-center shadow-lg"
-                  style={{
-                    backgroundImage: "url('https://picsum.photos/seed/taipei-classroom/800/600')",
-                  }}
-                />
-
-                {/* CILC Award callout */}
-                <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gold-400 flex items-center justify-center shrink-0">
-                    <Award className="text-white" size={22} />
-                  </div>
-                  <div>
-                    <div className="font-display font-bold text-neutral-900 text-base mb-1">
-                      CILC Pinnacle Award
-                    </div>
-                    <p className="text-neutral-600 text-sm leading-relaxed">
-                      The Center for Interactive Learning and Collaboration awarded
-                      Learning Live its Pinnacle Award — the highest distinction in
-                      live distance learning programming in K–12 education.
+                  <div className="space-y-5 body-md text-neutral-700">
+                    <p>
+                      Tsai Hsing Elementary School was founded in 1949 in the Wenshan
+                      District of Taipei, Taiwan. For decades, it held a place among
+                      the city&apos;s most respected private institutions — known for
+                      academic rigor, character education, and a bilingual emphasis that
+                      set its students apart.
+                    </p>
+                    <p>
+                      In the early 2010s, the school faced a challenge familiar to
+                      many institutions: a period of over-investment in athletics had
+                      created a reputational drift from its academic identity. Leadership
+                      wanted to restore the school&apos;s core distinction — and elevate
+                      its English and global education program in a way that no local
+                      hire could deliver.
+                    </p>
+                    <p>
+                      The conventional answer — bring in expat teachers — had already
+                      proven inconsistent. Cultural gaps, high turnover, and the absence
+                      of a sustained curriculum meant results that varied year to year.
+                      What Tsai Hsing wanted wasn&apos;t better instruction. It was a
+                      different kind of learning entirely.
+                    </p>
+                    <p>
+                      In 2009, Banyan proposed Learning Live: daily, live virtual
+                      sessions with a trained educator, a structured curriculum, and
+                      real international connection built directly into the school day.
+                      Not a tool. Not a vendor. A partner.
+                    </p>
+                    <p className="font-medium text-neutral-900">
+                      Tsai Hsing said yes. That partnership is still running today.
                     </p>
                   </div>
                 </div>
 
-                {/* Parent signal */}
-                <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-6">
-                  <p className="text-neutral-600 text-sm italic leading-relaxed mb-3">
-                    &ldquo;Parents cite Learning Live as a key factor in choosing Tsai Hsing.
-                    It is now marketed by the school as a signature element of its
-                    educational offering.&rdquo;
-                  </p>
-                  <div className="text-neutral-400 text-xs">
-                    — From the Tsai Hsing case study, 2025
+                {/* Right — photo + parent signal */}
+                <div className="space-y-5">
+                  <div
+                    className="rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-200 bg-cover bg-center shadow-lg"
+                    style={{
+                      backgroundImage: `url('${tsaiHsingImages.classroom}')`,
+                    }}
+                  />
+
+                  <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-6">
+                    <p className="text-neutral-600 text-sm italic leading-relaxed mb-3">
+                      &ldquo;Parents cite Learning Live as a key factor in choosing Tsai Hsing.
+                      It is now marketed by the school as a signature element of its
+                      educational offering.&rdquo;
+                    </p>
+                    <div className="text-neutral-400 text-xs">
+                      — From the Tsai Hsing case study, 2025
+                    </div>
                   </div>
                 </div>
               </div>
-
-            </div>
           </div>
         </section>
 
@@ -516,7 +493,7 @@ export default function LearningLivePage() {
                 <div
                   className="rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-200 bg-cover bg-center shadow-lg"
                   style={{
-                    backgroundImage: "url('https://picsum.photos/seed/taipei-school/800/600')",
+                    backgroundImage: `url('${tsaiHsingImages.schoolFront}')`,
                   }}
                 />
                 {/* Floating badge */}
