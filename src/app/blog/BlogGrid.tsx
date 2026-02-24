@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ArrowRight, Calendar } from 'lucide-react'
 import type { PostSummary } from '@/sanity/queries'
+import { getPostUrl } from '@/lib/postCategories'
 
 // ── Category mapping ──────────────────────────────────────────────────────────
 // Posts whose Sanity categories overlap these sets are shown in each tab.
@@ -117,7 +118,7 @@ export default function BlogGrid({ posts }: { posts: PostSummary[] }) {
                   </span>
                 )}
                 <h2 className="font-display font-semibold text-neutral-900 text-lg leading-snug mb-3 hover:text-[#0e4a83] transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={getPostUrl(post.slug)}>
                     {post.title}
                   </Link>
                 </h2>
@@ -134,7 +135,7 @@ export default function BlogGrid({ posts }: { posts: PostSummary[] }) {
                   {formatDate(post.publishedAt)}
                 </div>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={getPostUrl(post.slug)}
                   className="text-[#0e4a83] text-xs font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all"
                 >
                   Read <ArrowRight className="w-3.5 h-3.5" />

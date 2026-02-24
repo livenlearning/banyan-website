@@ -1,34 +1,33 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
-import { getPostBySlug, getAllPostSlugs } from '@/sanity/queries'
-import { POST_CATEGORIES } from '@/lib/postCategories'
+import { getPostBySlug } from '@/sanity/queries'
+import { POST_CATEGORIES, type PostCategory } from '@/lib/postCategories'
 import { ArrowLeft, Calendar } from 'lucide-react'
 
-// Static generation — only build pages for general (uncategorized) posts.
-// AI and Virtual Learning posts are served from /blog/[category]/[slug].
+// Static generation — build a page for every categorized post at deploy time
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs()
-  return slugs
-    .filter((slug) => !POST_CATEGORIES[slug])
-    .map((slug) => ({ slug }))
+  return Object.entries(POST_CATEGORIES).map(([slug, category]) => ({
+    category,
+    slug,
+  }))
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ category: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { category, slug } = await params
   const post = await getPostBySlug(slug)
   if (!post) return { title: 'Post not found' }
 
   const title = `${post.title} — Banyan Global Learning`
   const description = post.excerpt ?? 'Insights for educators from Banyan Global Learning.'
-  const url = `https://banyangloballearning.com/blog/${slug}`
+  const url = `https://banyangloballearning.com/blog/${category}/${slug}`
 
   // To add a social share image: place a 1200×630 JPG at /public/og-blog-default.jpg
   // Then uncomment: images: [{ url: '/og-blog-default.jpg', width: 1200, height: 630 }]
@@ -77,6 +76,11 @@ const CATEGORY_LABELS: Record<string, string> = {
   'news': 'News',
 }
 
+const SECTION_LABELS: Record<PostCategory, string> = {
+  'ai': 'AI in Education',
+  'virtual-learning': 'Virtual Learning',
+}
+
 // Portable Text component overrides
 const ptComponents = {
   block: {
@@ -112,19 +116,21 @@ const ptComponents = {
   },
 }
 
-export default async function BlogPostPage({
+export default async function CategorizedBlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ category: string; slug: string }>
 }) {
-  const { slug } = await params
+  const { category, slug } = await params
 
-  // If this slug belongs to a category, send to the canonical categorized URL
-  const cat = POST_CATEGORIES[slug]
-  if (cat) redirect(`/blog/${cat}/${slug}`)
+  // Guard: category param must be a valid PostCategory
+  const validCategory = POST_CATEGORIES[slug]
+  if (!validCategory || validCategory !== category) notFound()
 
   const post = await getPostBySlug(slug)
   if (!post) notFound()
+
+  const sectionLabel = SECTION_LABELS[category as PostCategory] ?? category
 
   return (
     <>
@@ -135,12 +141,15 @@ export default async function BlogPostPage({
         <section className="bg-white border-b border-neutral-100 pt-16 pb-10">
           <div className="container-site max-w-3xl mx-auto">
             <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-neutral-400 hover:text-[#0e4a83] text-sm mb-8 transition-colors"
+              href={`/blog`}
+              className="inline-flex items-center gap-2 text-neutral-400 hover:text-[#0e4a83] text-sm mb-2 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               All posts
             </Link>
+
+            {/* Breadcrumb hint */}
+            <p className="text-xs text-neutral-400 mb-6">{sectionLabel}</p>
 
             {post.categories?.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
