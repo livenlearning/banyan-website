@@ -54,6 +54,7 @@ const programs = [
 ]
 
 const topLinks = [
+  { label: 'Blog', href: '/blog' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
