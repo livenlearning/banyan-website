@@ -86,7 +86,7 @@ function ContactFormInner() {
         setStatus('error')
       }
     } catch {
-      setErrorMessage('Could not send your message. Please email us at travis@banyangloballearning.com.')
+      setErrorMessage('Could not send your message. Please email us at info@banyangloballearning.com.')
       setStatus('error')
     }
   }
