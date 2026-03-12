@@ -50,8 +50,8 @@ export default function HeroHome() {
 
           {/* Sub-headline */}
           <p className="body-lg text-blue-100 max-w-2xl mb-10">
-            Banyan connects K–12 students to live experts, global peers, and
-            real-world experiences — building the curiosity and perspective
+            Banyan connects K–12 students to expert facilitators, global peers, and
+            real-world experiences — building the curiosity and perspectives
             that books alone can&apos;t deliver.
           </p>
 

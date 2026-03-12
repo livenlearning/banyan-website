@@ -83,7 +83,7 @@ const whatMakesItWork = [
   {
     icon: Globe,
     title: 'International by design',
-    body: 'Classrooms are paired with genuine international peers — not simulated global perspectives, but real students from different countries and cultures.',
+    body: 'Classrooms are paired with international peers — not simulated global perspectives, but real students from different countries and cultures.',
   },
   {
     icon: Repeat,
@@ -93,24 +93,24 @@ const whatMakesItWork = [
   {
     icon: Users,
     title: 'Human-facilitated',
-    body: "Banyan's trained facilitators host every session, so your teacher shows up as a co-learner — not the sole expert — and students take center stage.",
+    body: "Banyan's trained facilitators host every session, so your teacher shows up as a co-learner — not the sole expert.",
   },
   {
     icon: BookOpen,
     title: 'Fits inside existing class time',
-    body: 'GLL is designed to slot into English, social studies, advisory, homeroom, or enrichment blocks. No new period required.',
+    body: 'GLL is designed to slot into ELA, social studies, advisory, homeroom, or enrichment blocks. No new period required.',
   },
   {
     icon: Zap,
     title: 'Low lift for teachers',
-    body: 'Teachers facilitate, they don&apos;t plan. Banyan handles curriculum, facilitation, partner matching, and scheduling so your team can focus on their students.',
+    body: 'Teachers participate, they don&apos;t plan. Banyan handles curriculum, facilitation, partner matching, and scheduling so your team can focus on their students.',
   },
 ]
 
 const whoItsFor = [
   'Students ages 10–14 (grades 5–8)',
   'Any subject: English, social studies, advisory, enrichment',
-  'Schools with access to basic video conferencing',
+  'Classrooms with access to basic video conferencing',
   'Teachers who want authentic engagement, not another add-on',
   'Coordinators looking for repeatable, sustainable global programming',
   'Schools tired of one-off cultural events that don&apos;t go anywhere',
@@ -118,8 +118,8 @@ const whoItsFor = [
 
 const logistics = [
   { icon: Calendar, label: 'Duration', value: '4 consecutive weeks per cycle' },
-  { icon: Clock, label: 'Session length', value: '40–50 minutes per week' },
-  { icon: Users, label: 'Cohort size', value: '~4 classrooms per cycle' },
+  { icon: Clock, label: 'Session length', value: '1 class period per week' },
+  { icon: Users, label: 'Cohort size', value: '~4 global classrooms per cohort' },
   { icon: Globe, label: 'Format', value: 'Live, synchronous, video-based' },
   { icon: BookOpen, label: 'Fits into', value: 'Existing class schedule' },
   { icon: Sparkles, label: 'Price', value: '~$1,000 per classroom per cycle' },
@@ -189,9 +189,9 @@ export default function GLLPage() {
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 max-w-4xl mx-auto">
               {[
-                { step: '01', label: 'Awe', sub: 'A live encounter with something genuinely surprising' },
+                { step: '01', label: 'Awe', sub: 'A live encounter with something genuinely surprising...and inspirational' },
                 { step: '02', label: 'Expression', sub: 'Students share their own story, in their own voice' },
-                { step: '03', label: 'Reciprocity', sub: 'Engaging with peers across the world' },
+                { step: '03', label: 'Reciprocity', sub: 'Engage with peers across the world' },
                 { step: '04', label: 'Connection', sub: 'Something that is felt, not just learned' },
               ].map((item, i) => (
                 <div key={i} className="text-center">
@@ -214,9 +214,10 @@ export default function GLLPage() {
           <div className="container-site">
             <div className="max-w-4xl mx-auto">
               <p className="section-label mb-4">What it is</p>
-              <h2 className="display-md text-neutral-900 mb-6 text-balance">
-                Not a pen-pal program. Not a one-off event.{' '}
-                <span className="text-teal-500">Something new.</span>
+              <h2 className="display-md text-neutral-900 mb-6">
+                  <span className="block">Not a pen-pal program.</span>
+                  <span className="block">Not a one-off event.</span>
+                  <span className="block text-teal-500">Something new.</span>
               </h2>
               <div className="space-y-5 body-lg text-neutral-700">
                 <p>
@@ -227,14 +228,14 @@ export default function GLLPage() {
                 </p>
                 <p>
                   Each cycle pairs your classroom with international peers for four
-                  weeks of live, 40–50 minute sessions. A trained Banyan facilitator
+                  weeks of live sessions that fit into a single class period. A trained Banyan facilitator
                   hosts every session, so your teacher shows up as a co-learner. The
                   curriculum does the heavy lifting. Your students do the connecting.
                 </p>
                 <p>
                   The result isn&apos;t a performance or a one-time cultural exchange.
                   It&apos;s a felt experience — students who leave the cycle saying
-                  something like <em>"I actually talked to someone in another country,
+                  something like <em>"I actually communicated with someone in another country,
                   and they were kind of like me."</em>
                 </p>
               </div>
@@ -300,8 +301,8 @@ export default function GLLPage() {
                 {/* Floating stat */}
                 <div className="absolute bottom-5 left-5 right-5 flex gap-3">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                    <div className="font-display font-extrabold text-teal-600 text-2xl leading-none">40–50</div>
-                    <div className="text-neutral-500 text-xs mt-0.5">min per session</div>
+                    <div className="font-display font-extrabold text-teal-600 text-2xl leading-none">1</div>
+                    <div className="text-neutral-500 text-xs mt-0.5">class period</div>
                   </div>
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
                     <div className="font-display font-extrabold text-teal-600 text-2xl leading-none">Live</div>
@@ -314,7 +315,8 @@ export default function GLLPage() {
               <div className="order-1 lg:order-2">
                 <p className="section-label mb-4">What a session looks like</p>
                 <h2 className="display-md text-neutral-900 mb-6">
-                  Your teacher shows up. Banyan handles the rest.
+                  <span className="block">Your teacher shows up.</span>
+                  <span className="block">Banyan handles the rest.</span>
                 </h2>
                 <div className="space-y-5 text-neutral-700">
                   <p className="body-lg">
@@ -331,7 +333,7 @@ export default function GLLPage() {
                     students.
                   </p>
                   <p className="body-md">
-                    Between sessions, students complete a light artifact — a short
+                    During sessions, students complete a light artifact — a short
                     video, a drawing, a personal story — that gets shared with their
                     international cohort. This is where the asynchronous thread
                     builds. When they come back live the next week, they&apos;re
@@ -424,7 +426,7 @@ export default function GLLPage() {
                 <div className="space-y-5">
                   {[
                     {
-                      title: 'A 40–50 minute weekly slot',
+                      title: 'A single period weekly slot',
                       body: "GLL fits into existing class time — it doesn't need a new period. English, social studies, advisory, and enrichment all work.",
                     },
                     {
@@ -433,7 +435,7 @@ export default function GLLPage() {
                     },
                     {
                       title: 'A teacher willing to step back',
-                      body: "The best GLL teachers trust the process and let students lead. The facilitator's job is to hold the space; the teacher's job is to participate.",
+                      body: "The best GLL teachers trust the process and guide the students. The facilitator's job is engage curiousity; the teacher's job is to participate.",
                     },
                     {
                       title: 'Commitment for 4 weeks',
@@ -457,11 +459,14 @@ export default function GLLPage() {
             <div className="text-center max-w-xl mx-auto mb-14">
               <p className="section-label mb-4">Logistics &amp; pricing</p>
               <h2 className="display-md text-neutral-900 mb-4">
-                Simple to understand. Easy to budget.
+                <span className="block">Simple to understand.</span>
+                <span className="block">Easy to budget.</span>
               </h2>
               <p className="body-md text-neutral-600">
-                One flat rate per classroom per cycle. No hidden fees. No per-student
-                licensing. Just connect, and go.
+                <span className="block">One flat rate per classroom per cycle.</span>
+                <span className="block">No hidden fees.</span>
+                <span className="block">No per-student licensing.</span>
+               <span className="block">Just connect, and go.</span>
               </p>
             </div>
 
@@ -491,8 +496,8 @@ export default function GLLPage() {
               <div className="stat-number text-teal-500 mb-2">~$1,000</div>
               <div className="text-neutral-700 font-medium text-lg mb-1">per classroom, per cycle</div>
               <p className="text-neutral-500 text-sm mb-6">
-                Includes all facilitation, curriculum, partner matching, and scheduling.
-                Volume pricing available for schools running multiple classrooms.
+                <span className="block">Includes all facilitation, curriculum, partner matching, and scheduling.</span>
+                <span className="block">Volume pricing available for schools running multiple classrooms.</span>
               </p>
               <Link href="/contact?program=gll" className="btn btn-teal btn-lg">
                 Request enrollment information
@@ -512,8 +517,8 @@ export default function GLLPage() {
               <blockquote className="relative">
                 <div className="text-7xl text-teal-200 font-serif leading-none mb-4">&ldquo;</div>
                 <p className="display-sm text-neutral-800 font-medium italic mb-6 text-balance">
-                  Something happens in that fourth session. You can see it on their
-                  faces — they stop performing and start actually talking to each other.
+                  Sharing with others like them, but around the world, feels different. You can see it on their
+                  faces — they stop performing and start actually engaging with each other.
                   That&apos;s rare.
                 </p>
                 <footer className="text-neutral-500 text-sm">
@@ -526,7 +531,7 @@ export default function GLLPage() {
                 {[
                   { number: '15+', label: 'Years of global learning experience' },
                   { number: '20+', label: 'Countries represented' },
-                  { number: '5,000+', label: 'Students impacted' },
+                  { number: '45,000+', label: 'Students impacted' },
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="stat-number text-teal-500">{stat.number}</div>
@@ -547,13 +552,13 @@ export default function GLLPage() {
               </p>
               <h2 className="display-md text-white mb-5">
                 GLL is built on the same model as Learning Live — our
-                17-year exclusive partnership with Tsai Hsing Elementary in Taipei.
+                17-year exclusive partnership with Tsai Hsing School in Taipei.
               </h2>
               <p className="text-blue-100 body-lg mb-8">
                 Since 2009, Banyan has delivered daily live sessions to Taipei
-                students in grades 5–8. Over 5,000 students. CILC Pinnacle Award.
-                Alumni at NYU, University of Washington, and Ohio State. GLL takes
-                that model and makes it available to any school, anywhere.
+                students in grades 5–8.
+                Alumni at NYU, University of Washington, and Ohio State. GLL has taken
+                that model and made it available to any school, anywhere.
               </p>
               <Link href="/programs/learning-live" className="btn btn-white btn-lg">
                 Read the Learning Live story
@@ -571,7 +576,7 @@ export default function GLLPage() {
                 Ready to connect your classroom to the world?
               </h2>
               <p className="body-lg text-teal-100 mb-10">
-                Cycles fill quickly. Reach out to learn about upcoming cohort dates,
+                Cohorts fill quickly. Reach out to learn about upcoming cyle dates,
                 enrollment requirements, and whether GLL is the right fit for your
                 school.
               </p>

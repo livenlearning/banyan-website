@@ -17,8 +17,8 @@ const features = [
   },
   {
     icon: '🔄',
-    title: 'Repeatable cycles',
-    body: "Four-week cycles with clear themes. Schools re-enroll cycle after cycle because students ask to come back.",
+    title: 'Year-long pathways',
+    body: "Four-week themed cycles with clear focus and structure. Schools renew with new content each cycle because students want to return.",
   },
   {
     icon: '✍️',
@@ -28,7 +28,7 @@ const features = [
   {
     icon: '👤',
     title: 'Always human-facilitated',
-    body: "A trained Banyan facilitator guides every live session. Teachers participate. Nobody flies blind.",
+    body: "A trained Banyan facilitator leads every session. We develop the curriculum and run the instruction; teachers support, observe, and extend the learning in their own classrooms.",
   },
 ]
 
@@ -48,8 +48,7 @@ export default function GLLCallout() {
             </h2>
 
             <p className="body-lg text-neutral-600 mb-8">
-              Global Learning Live pairs your classroom with international peers
-              for live, facilitated sessions built around awe, expression, and
+              Banyan leads and facilitates a 4-week thematic exchange with international peers built around awe, expression, and
               reciprocity. Students don&apos;t just see the world — they talk to it,
               respond to it, and are changed by it.
             </p>

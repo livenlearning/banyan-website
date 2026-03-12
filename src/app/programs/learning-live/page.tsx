@@ -36,39 +36,54 @@ const stats = [
   { number: '17', suffix: ' years', label: 'of uninterrupted daily live sessions' },
   { number: '5,000', suffix: '+', label: 'students have moved through the program' },
   { number: '1 → 8', suffix: '', label: 'classrooms, grown from a single pilot' },
-  { number: '3', suffix: '', label: 'alumni universities: NYU, UW, Ohio State — and more' },
+  { number: '15', suffix: '', label: 'alumni universities: NYU, Georgetown, Northwestern — and more' },
 ]
 
 const timeline = [
   {
+    year: '2008',
+    title: 'The Spark. One Classroom, One Camera.',
+    body: 'Learning Live launches with a single 5th grade classroom in Taipei, connecting students to a live educator in the U.S. Through nothing more than a camera and a shared passion for learning, a new model of global education is born.',
+  },
+  {
     year: '2009',
-    title: 'One classroom. One camera.',
-    body: 'Banyan begins daily live sessions with a single Tsai Hsing classroom. Sessions run from a converted studio — no script, no precedent. Just a live educator, a class of fifth graders in Taipei, and a belief that connection could be built through a screen.',
+    title: 'Expanding Across Grade Levels',
+    body: 'Learning Live is added to Grades 6, 7, and 8, creating a comprehensive middle school program that builds students&apos; skills and confidence over multiple years.',
   },
   {
-    year: '2012',
-    title: 'Expansion to three classrooms.',
-    body: 'Word spreads within the school. Teachers request participation. The program expands to three classrooms across grade levels, and Banyan builds the curriculum infrastructure to support daily sessions at scale.',
+    year: '2010',
+    title: 'First International Collaboration',
+    body: 'Tsai Hsing students receive a special award at New York&apos;s Lego Robotics competition after collaborating with a team from Locust Valley High School. This marks the beginning of a series of international collaborations that become a hallmark of the program.',
   },
   {
-    year: '2015',
-    title: 'Program matures across grades.',
-    body: 'Daily sessions are now integrated across multiple grade levels with stronger curriculum sequencing, making Learning Live part of the school\'s long-term academic identity.',
+    year: '2011',
+    title: 'Pioneering Mobile Learning',
+    body: 'As 4G technology expands in the U.S., Learning Live introduces real-time virtual field trips. Students explore the streets of L.A., engage with local artists, and witness the behind-the-scenes world of American culture. Learning becomes an adventure beyond the classroom walls.',
+  },
+  {
+    year: '2014',
+    title: 'Collaboration at Scale',
+    body: 'The program expands to serve over 500 students across multiple grade levels. Banyan builds a robust curriculum aligned to linguistic, digital, and cultural competencies. Learning Live becomes a signature of Tsai Hsing&apos;s academic identity.',
+  },
+  {
+    year: '2017',
+    title: 'Expanding to Elementary Grades',
+    body: 'Building on its success in middle school, Learning Live introduces the Bridges curriculum for Kindergarten through Grade 4, fostering curiosity and global awareness from a young age.',
   },
   {
     year: '2019',
-    title: 'Ten-year milestone. Five classrooms.',
-    body: 'A decade in. The program has served over 2,000 students. Tsai Hsing marks the milestone as a signature part of its educational identity — cited by parents as a deciding factor in school choice.',
+    title: 'A Decade of Impact',
+    body: 'Learning Live marks its 10th anniversary, having served over 2,000 students. Parents cite the program as a key factor in choosing Tsai Hsing. Students showcase their skills in international competitions and collaborations with elite schools like Menlo.',
   },
   {
     year: '2024',
-    title: 'Eight classrooms. Five thousand alumni.',
-    body: 'The program reaches its largest scale yet. Alumni begin appearing at international universities. The first Tsai Hsing Learning Live graduates are accepted to NYU, the University of Washington, and Ohio State.',
+    title: 'The Next Generation of Global Leaders',
+    body: 'With eight classrooms and over 5,000 alumni, Learning Live reaches new heights. Graduates are accepted to prestigious universities such as NYU, University of Washington, and Ohio State, ready to thrive in a globalized world.',
   },
   {
     year: '2026',
-    title: 'The model becomes Global Learning Live.',
-    body: 'Banyan launches GLL — a program that takes the Learning Live model and makes it available to any school, anywhere. The product is different. The insight behind it is the same.',
+    title: 'From Pioneering to Prove: The Birth of Global Learning Live',
+    body: 'Building on 17 years of success at Tsai Hsing, Banyan launches Global Learning Live (GLL), making the Learning Live model accessible to schools worldwide. A groundbreaking partnership becomes a proven pathway to foster the skills, confidence, and perspective students need to lead in the 21st century.',
   },
 ]
 
@@ -78,7 +93,7 @@ const outcomes = [
     color: 'text-gold-600',
     bg: 'bg-gold-50',
     title: 'Confidence in English communication',
-    body: 'Students developed the ability to speak English spontaneously and publicly — not just correctly. They presented to international audiences, held real-time discussions, and learned that communication is a relationship, not a performance.',
+    body: 'Students develop the ability to speak English spontaneously and publicly — not just correctly. They present to international audiences, hold real-time discussions, and learn that communication is a relationship, not a performance.',
     detail: 'Tsai Hsing students regularly present to international audiences in English — a direct outcome of years of live, stakes-bearing exchange.',
   },
   {
@@ -86,16 +101,16 @@ const outcomes = [
     color: 'text-gold-600',
     bg: 'bg-gold-50',
     title: 'Cultural and global competency',
-    body: 'The curriculum aligned with UN Sustainable Development Goals and brought students into cross-continental conversations on climate, identity, food, and place. They virtually explored jazz clubs in New Orleans and food carts in Mexico City — not as passive viewers, but as participants asking questions.',
-    detail: 'Not cultural tourism — cultural relationship. Students built mental models of the world by talking to people who live in it.',
+    body: 'The curriculum aligns with UN Sustainable Development Goals and brings students into cross-continental conversations on climate, identity, food, and place. They virtually explore jazz clubs in New Orleans and food carts in Mexico City — not as passive viewers, but as participants asking questions.',
+    detail: 'Not cultural tourism — cultural relationship. Students build mental models of the world by talking to people who live in it.',
   },
   {
     icon: GraduationCap,
     color: 'text-gold-600',
     bg: 'bg-gold-50',
     title: 'Academic growth and lifelong impact',
-    body: 'High attendance, high participation, and outcomes that outlasted the program itself. Alumni who went through Learning Live in 5th grade arrived at international universities with the confidence, communication skills, and global perspective their peers were still building.',
-    detail: 'Alumni accepted to NYU, University of Washington, Ohio State, and top international high schools and universities across Asia and the West.',
+    body: 'With high attendance, high participation, and high engagement, the outcomes of the Learning Live program can be seen long after the students leave the classroom. Alumni who go through Learning Live in 5th grade arrive at international universities with the confidence, communication skills, and global perspective their peers are still building.',
+    detail: 'Alumni accepted to NYU, University of Washington, UC Santa Barbara, Ohio State, Stony Brook, and top international high schools and universities across Asia and the West.',
   },
 ]
 
@@ -153,14 +168,12 @@ export default function LearningLivePage() {
 
               <p className="body-lg text-amber-100 mb-5 max-w-2xl">
                 Since 2009, Banyan has delivered daily live virtual sessions to
-                Tsai Hsing Elementary School in Taipei, Taiwan — one of the city&apos;s
-                most esteemed private institutions. It is the longest continuously
-                running live virtual learning program in K–12 education.
+                Tsai Hsing School in Taipei, Taiwan — one of the city&apos;s
+                most esteemed private institutions. It is the longest
+                running daily live virtual learning program in K–12 education.
               </p>
               <p className="body-md text-amber-200/80 max-w-2xl mb-12">
-                This page is not a sales page. It is a record of what happens when
-                live, expert-facilitated global learning is given seventeen years to
-                prove itself.
+                This is what seventeen years of live, expert-facilitated global learning actually looks like.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -187,7 +200,7 @@ export default function LearningLivePage() {
                 </div>
                 <div>
                   <div className="text-amber-300 text-xs font-semibold uppercase tracking-wide">Partner school</div>
-                  <div className="text-white font-display font-semibold">Tsai Hsing Elementary, Taipei, Taiwan</div>
+                  <div className="text-white font-display font-semibold">Tsai Hsing School, Taipei, Taiwan</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 shrink-0 rounded-xl border border-white/10 bg-black/10 px-4 py-3">
@@ -283,40 +296,44 @@ export default function LearningLivePage() {
                 <div>
                   <p className="section-label mb-4">The story</p>
                   <h2 className="display-md text-neutral-900 mb-7">
-                    A school that needed something the market couldn&apos;t give it.
+                    Tsai Hsing School: A Pioneer in Global Education
                   </h2>
 
                   <div className="space-y-5 body-md text-neutral-700">
                     <p>
-                      Tsai Hsing Elementary School was founded in 1949 in the Wenshan
-                      District of Taipei, Taiwan. For decades, it held a place among
-                      the city&apos;s most respected private institutions — known for
-                      academic rigor, character education, and a bilingual emphasis that
-                      set its students apart.
+                      Founded in 1949 in Taipei&apos;s Wenshan District, Tsai Hsing
+                      School has long been recognized as one of the city&apos;s most
+                      respected private institutions. Known for its commitment to
+                      academic rigor and moral character development, Tsai Hsing has
+                      consistently prepared students to become future leaders.
                     </p>
                     <p>
-                      In the early 2010s, the school faced a challenge familiar to
-                      many institutions: a period of over-investment in athletics had
-                      created a reputational drift from its academic identity. Leadership
-                      wanted to restore the school&apos;s core distinction — and elevate
-                      its English and global education program in a way that no local
-                      hire could deliver.
+                      In the mid-2000s, the school&apos;s leadership recognized the
+                      growing importance of English proficiency and digital skills in
+                      the global education landscape. They sought to elevate the
+                      school&apos;s English and global education program in a way that
+                      no local hire could deliver.
                     </p>
                     <p>
-                      The conventional answer — bring in expat teachers — had already
-                      proven inconsistent. Cultural gaps, high turnover, and the absence
-                      of a sustained curriculum meant results that varied year to year.
-                      What Tsai Hsing wanted wasn&apos;t better instruction. It was a
-                      different kind of learning entirely.
-                    </p>
-                    <p>
-                      In 2009, Banyan proposed Learning Live: daily, live virtual
-                      sessions with a trained educator, a structured curriculum, and
-                      real international connection built directly into the school day.
-                      Not a tool. Not a vendor. A partner.
+                      The school realized that once students reached the middle grades,
+                      their English level was sufficient for real-world practice, which
+                      was crucial for advancing beyond classroom proficiency. If bringing
+                      the classroom into the real world wasn&apos;t feasible, they
+                      wondered, what if they did the next best thing?
                     </p>
                     <p className="font-medium text-neutral-900">
-                      Tsai Hsing said yes. That partnership is still running today.
+                      The result was a groundbreaking approach to learning.
+                    </p>
+                    <p>
+                      In 2008, Tsai Hsing partnered with Banyan to create the first
+                      Learning Live pilot in a single fifth-grade classroom. The program
+                      offered daily, live virtual sessions with an expert educator, a
+                      structured curriculum, and authentic international connections
+                      built directly into the school day.
+                    </p>
+                    <p className="font-medium text-neutral-900">
+                      The partnership quickly expanded to all middle grade levels and
+                      continues to thrive today.
                     </p>
                   </div>
                 </div>
@@ -397,7 +414,7 @@ export default function LearningLivePage() {
             <div className="text-center max-w-xl mx-auto mb-16">
               <p className="section-label mb-4">The timeline</p>
               <h2 className="display-md text-neutral-900 mb-4">
-                Seventeen years, built one year at a time
+                Seventeen years built one year at a time
               </h2>
               <p className="body-md text-neutral-600">
                 There&apos;s no shortcut to a 17-year track record. This is how it
@@ -507,19 +524,19 @@ export default function LearningLivePage() {
               <div>
                 <p className="section-label mb-4">Tsai Hsing today</p>
                 <h2 className="display-md text-neutral-900 mb-6">
-                  A school that reclaimed its distinction — and never looked back.
+                  A school that helped build a new way of learning — and never looked back.
                 </h2>
                 <div className="space-y-5 body-md text-neutral-700">
                   <p>
                     Today, Learning Live runs across eight Tsai Hsing classrooms.
                     The partnership has become inseparable from the school&apos;s identity —
                     cited in enrollment conversations, featured in school marketing,
-                    and returned to year after year not because of inertia, but
+                    and returned to year-after-year
                     because students ask to come back.
                   </p>
                   <p>
                     The program delivered what Tsai Hsing had asked for in 2009:
-                    not better English instruction, but students who could move
+                    students who could move
                     through the world with confidence, curiosity, and the capacity
                     to connect across difference.
                   </p>
@@ -531,7 +548,7 @@ export default function LearningLivePage() {
 
                 <div className="mt-8 flex flex-wrap gap-6">
                   {[
-                    { icon: TrendingUp, label: 'Enrollment growth attributed to the program' },
+                    { icon: TrendingUp, label: 'Tsai Hsing enjoys enrollment at capacity' },
                     { icon: Lightbulb, label: 'Daily sessions, uninterrupted since 2009' },
                     { icon: Users, label: 'Parents cite it as a key school-choice factor' },
                   ].map((item, i) => {
@@ -575,10 +592,7 @@ export default function LearningLivePage() {
                 We spent 17 years figuring out what sustained global learning actually looks like.
               </h2>
               <p className="body-lg text-amber-100 mb-5 max-w-2xl mx-auto">
-                Global Learning Live is what we built from it. A 4-week cohort program
-                that takes the same model — live facilitation, international peer
-                connection, awe-driven experience, and the discipline to let connection
-                build over time — and makes it available to any school, anywhere.
+                For schools seeking a more accessible entry point, we created Global Learning Live — a 4-week cohort program that distills the essential elements of that model: live facilitation, international peer connection, awe-driven experiences, and the discipline to let connection build over time.
               </p>
               <p className="text-amber-200/70 text-sm mb-12">
                 It is not the same product. But it is the same insight.

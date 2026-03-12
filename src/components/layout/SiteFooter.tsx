@@ -95,7 +95,7 @@ export default function SiteFooter() {
             © {new Date().getFullYear()} Banyan Global Learning. All rights reserved.
           </p>
           <p className="text-xs text-neutral-600">
-            Founded 2009 · Seattle, WA
+            Founded 2009 · New York, NY
           </p>
         </div>
       </div>

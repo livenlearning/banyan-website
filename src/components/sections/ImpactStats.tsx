@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { number: '5,000+',  label: 'Students served',        sub: 'across our flagship program alone' },
+  { number: '45,000+',  label: 'Students served',        sub: 'across our flagship program alone' },
   { number: '17',      label: 'Years of partnership',   sub: 'with our anchor school in Taipei' },
   { number: '20+',     label: 'Countries connected',    sub: 'live, synchronous, every cycle' },
   { number: '2009',    label: 'Year founded',           sub: 'building this before it was a category' },

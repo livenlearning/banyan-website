@@ -47,7 +47,7 @@ const products = [
     name: 'Learning Live',
     tagline: '17 years. One school. The blueprint.',
     description:
-      "Our foundational partnership with Tsai Hsing Elementary in Taipei — 5,000+ students, daily live sessions, 17 years running.",
+      "Our foundational partnership with Tsai Hsing Elementary in Taipei — 45,000+ students, daily live sessions, 17 years running.",
     details: ['Exclusive partnership', 'Grades 5–8', 'Daily sessions', 'Est. 2009'],
     cta: 'Read the case study',
     btnClass: 'btn-gold',
