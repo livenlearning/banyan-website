@@ -93,7 +93,7 @@ export default function ProductsGrid() {
 
               {/* Visual card header */}
               <div
-                className="relative h-32 flex flex-col items-center justify-center overflow-hidden"
+                className="relative h-40 flex flex-col items-center justify-center overflow-hidden"
                 style={{ background: product.headerGradient }}
               >
                 {/* Large background icon for texture */}
@@ -110,19 +110,20 @@ export default function ProductsGrid() {
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
+                {/* Name */}
+                <h3 className="font-display text-lg font-bold text-white relative z-10 leading-snug text-center px-4">
+                  {product.name}
+                </h3>
                 {/* Badge */}
-                <span className="badge badge-white relative z-10 text-[10px] px-2 py-0.5">
+                <span className="badge badge-white relative z-10 text-[10px] px-2 py-0.5 mt-2">
                   {product.badgeLabel}
                 </span>
               </div>
 
               <div className="p-6 flex flex-col flex-1">
 
-                {/* Name + tagline */}
-                <h3 className="font-display text-lg font-bold text-neutral-900 mb-1 leading-snug">
-                  {product.name}
-                </h3>
-                <p className="text-xs font-medium text-neutral-500 mb-4 uppercase tracking-wide">
+                {/* Tagline */}
+                <p className="text-xs font-medium text-neutral-900 mb-4 uppercase tracking-wide">
                   {product.tagline}
                 </p>
 
