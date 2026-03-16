@@ -163,7 +163,7 @@ export default function LearningLivePage() {
               <h1 className="display-xl text-white text-balance mb-7 leading-[1.05]">
                 Seventeen years.<br />
                 One school.<br />
-                <span className="text-amber-200">Five thousand students.</span>
+                <span className="text-amber-200">Six thousand students.</span>
               </h1>
 
               <p className="body-lg text-amber-100 mb-5 max-w-2xl">
