@@ -44,7 +44,7 @@ const cases = [
     accentColor: 'bg-[#e5a025]',
     borderColor: 'border-[#e5a025]',
     accentBar: 'bg-[#e5a025]',
-    tagline: '17 years. 5,000+ students. One enduring partnership.',
+    tagline: '17 years. 6,000+ students. One enduring partnership.',
     org: 'Tsai Hsing School',
     location: 'Wenshan District, Taipei, Taiwan',
     type: 'Private K–12 School',
@@ -52,14 +52,14 @@ const cases = [
     stats: [
       { value: '17 yrs', label: 'Exclusive ongoing partnership' },
       { value: '5,000+', label: 'Students served' },
-      { value: '1 → 8', label: 'Classrooms expanded over the partnership' },
+      { value: '1 → 8', label: 'Classrooms running synchronously, expanded over the partnership' },
     ],
     quote: {
       text: 'Our students didn\'t just learn English — they learned to use it, to think critically, and to engage with the world.',
       attribution: 'Tsai Hsing administrator',
     },
     challenge:
-      'After reputational challenges in the early 2010s, Tsai Hsing sought a partner who could do more than teach English — they needed one who could elevate student confidence and global competency in ways local expat teachers could not deliver.',
+      'In the mid-2000s, Tsai Hsing School sought to elevate its English and global education program beyond what local hires could deliver. The school needed a partner to provide students with authentic international connections and help them develop the confidence and skills necessary to thrive in a globalized world, creating a signature program that would set Tsai Hsing apart from other institutions.',
     icon: BookOpen,
     ctaLabel: 'Read the full case study',
   },
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
               <span className="text-gradient-gold">Real results.</span>
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Banyan has been doing this since 2009. These are two of the partnerships that show
+              Banyan has been doing this since 2008. These are two of the partnerships that show
               what&apos;s possible when global learning is done with intention.
             </p>
           </div>
@@ -92,9 +92,9 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
                 { value: '15+', label: 'Years of live global learning' },
-                { value: '5,000+', label: 'Students served' },
+                { value: '6,000+', label: 'Students served' },
                 { value: '20+', label: 'Countries connected' },
-                { value: '2', label: 'Active case studies & counting' },
+                { value: '100k+', label: 'Live sessions delivered' },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="stat-number text-[#0e4a83]">{s.value}</div>

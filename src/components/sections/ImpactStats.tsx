@@ -7,7 +7,7 @@ const stats = [
   { number: '45,000+',  label: 'Students served',        sub: 'across our flagship program alone' },
   { number: '17',      label: 'Years of partnership',   sub: 'with our anchor school in Taipei' },
   { number: '20+',     label: 'Countries connected',    sub: 'live, synchronous, every cycle' },
-  { number: '2009',    label: 'Year founded',           sub: 'building this before it was a category' },
+  { number: '2008',    label: 'Year founded',           sub: 'building this before it was a category' },
 ]
 
 export default function ImpactStats() {
@@ -18,7 +18,7 @@ export default function ImpactStats() {
         <div className="text-center mb-14">
           <p className="section-label text-blue-300 mb-3">Our Impact</p>
           <h2 className="display-md text-white max-w-2xl mx-auto text-balance">
-            Built on 15 years of doing the hard thing
+            Built on 17 years of doing the hard thing
           </h2>
         </div>
 

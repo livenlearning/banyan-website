@@ -51,7 +51,7 @@ const pillars = [
         parts: '3-part series',
         audience: 'Grades 3–8',
         description:
-          'Students travel live to Taipei\'s vibrant night markets, navigate the city in a "choose your own adventure" style, and celebrate Lunar New Year traditions with an expert guide on the ground. Along the way, they pick up Mandarin phrases, explore food and entertainment, and travel together across the Pacific — without leaving their classroom.',
+          'Students travel live to Taipei\'s vibrant night markets, navigate the city\'s transportation system in a "choose your own adventure" style, and celebrate Lunar New Year traditions with an expert guide on the ground. Along the way, they pick up Mandarin phrases, explore food and entertainment, and travel together across the Pacific — without leaving their classroom.',
         highlights: [
           'Live exploration of two Taipei night markets',
           'Lunar New Year traditions explained from the source',
@@ -79,10 +79,10 @@ const pillars = [
         parts: 'Complete series · Pre-K–Grade 4',
         audience: 'Pre-K–Grade 4',
         description:
-          'A fun, interactive series built around a crew of puppet friends from Digitopolis. Students guide their new friends through real-world digital dilemmas — including what happens when Dude posts an embarrassing photo of a friend as a joke. Rooted in the Zones of Regulation framework, this series builds practical digital judgment through story, problem-solving, and live discussion.',
+          'A fun, interactive series built around a crew of puppet friends from Digitopolis. Students guide their new friends through real-world digital dilemmas — including what happens when Dude posts an embarrassing photo of a friend as a joke. Rooted in proven emotional self-regulation strategies, this series builds practical digital judgment through story, problem-solving, and live discussion.',
         highlights: [
           'Puppet-based storytelling for genuine engagement',
-          'Grounded in Zones of Regulation (Leah Kuypers, MA.Ed.)',
+          'Grounded in emotional self-regulation frameworks',
           'Covers privacy, consent, and online kindness',
           'Age-appropriate scenarios with real decision moments',
         ],
@@ -120,7 +120,7 @@ const pillars = [
         parts: '3-episode series',
         audience: 'Grades K–5',
         description:
-          'Originally created during the pandemic to meet students in one of the most emotionally difficult moments in recent education history, Social Emotional Superheroes has grown into one of our most-requested programs. Students discover that real superheroes aren\'t defined by what they can do — but by what they can feel, understand, and choose. Three episodes, each building on the last.',
+          'Originally created during the pandemic to meet students in one of the most emotionally difficult moments in recent education history, Social Emotional Superheroes has grown into one of our most-requested programs. Students discover that real superheroes aren\'t defined by what they can do — but by understanding what they feel so that they can make good choices. Three episodes, each building on the last.',
         highlights: [
           'Episode 1: Knowing your own emotions and returning to the green zone',
           'Episode 2: Seeing through others\u2019 eyes \u2014 empathy as a superpower',
@@ -157,7 +157,7 @@ const howItWorks = [
 
 const logistics = [
   { icon: Clock, label: 'Session length', value: '40–60 minutes' },
-  { icon: Users, label: 'Class size', value: 'Standard classroom (up to 35)' },
+  { icon: Users, label: 'Class size', value: 'Standard classroom (up to 35 - inquire for larger parties)' },
   { icon: Star, label: 'Grade levels', value: 'Pre-K through Grade 8' },
   { icon: Video, label: 'Platform', value: 'Zoom, Google Meet, or Teams' },
   { icon: CalendarCheck, label: 'Booking window', value: 'As little as 2 weeks out' },
@@ -195,9 +195,8 @@ export default function VirtualFieldTripsPage() {
                 </div>
 
                 <h1 className="display-xl text-white text-balance mb-6">
-                  Expert-guided.{' '}
-                  <span className="text-gradient-gold">Live.</span>{' '}
-                  Today.
+                  Guided by experts.{' '}
+                  <span className="text-gradient-gold">Live.</span>
                 </h1>
 
                 <p className="body-lg text-blue-100 mb-10 max-w-xl">
@@ -397,7 +396,7 @@ export default function VirtualFieldTripsPage() {
                 Logistics &amp; pricing
               </p>
               <h2 className="display-md text-white mb-4">
-                One great class period.{' '}
+                One great class period.<br />
                 <span className="text-gradient-gold">One simple price.</span>
               </h2>
               <p className="text-neutral-400 body-md">
@@ -467,7 +466,7 @@ export default function VirtualFieldTripsPage() {
                 {[
                   {
                     title: 'Live, not recorded',
-                    body: 'Students ask real questions and get real answers in real time. The unpredictability is the point.',
+                    body: 'Students ask real questions and get real answers in real time. The spontaneity is the point.',
                   },
                   {
                     title: 'Expert-facilitated',

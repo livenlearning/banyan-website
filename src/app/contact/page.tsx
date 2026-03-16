@@ -122,12 +122,12 @@ export default function ContactPage() {
                       {
                         step: '1',
                         title: 'We read your message',
-                        body: 'Every inquiry goes directly to our team — not a CRM queue.',
+                        body: 'Every inquiry goes directly to our team.',
                       },
                       {
                         step: '2',
                         title: 'We reach out within a day',
-                        body: "We'll respond with questions or to schedule a short call.",
+                        body: "We'll respond with confirmation, questions, or to schedule a short call.",
                       },
                       {
                         step: '3',

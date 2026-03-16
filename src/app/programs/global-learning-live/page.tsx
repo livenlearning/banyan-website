@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const fourWeekArc = [
   {
     week: 'Week 1',
-    title: 'Big Question + Awe Anchor',
+    title: 'Big Question\n+ Awe Anchor',
     description:
       'A front-loaded live experience designed to create genuine awe — an encounter with something unexpected, beautiful, or hard to explain. Students leave with one personal "big question" to carry into the cycle.',
     icon: Sparkles,
@@ -322,8 +322,8 @@ export default function GLLPage() {
                   <p className="body-lg">
                     A Banyan facilitator opens the session live with an awe anchor —
                     something unexpected, beautiful, or hard to explain from somewhere
-                    in the world. Students from multiple classrooms, in multiple
-                    countries, experience it together.
+                    in the world. The same moment reaches classrooms across multiple 
+                    countries — each in their own time, all within the same week.
                   </p>
                   <p className="body-md">
                     From there, the facilitator moves students through structured
@@ -531,7 +531,7 @@ export default function GLLPage() {
                 {[
                   { number: '15+', label: 'Years of global learning experience' },
                   { number: '20+', label: 'Countries represented' },
-                  { number: '45,000+', label: 'Students impacted' },
+                  { number: '100k+', label: 'Live sessions delivered' },
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="stat-number text-teal-500">{stat.number}</div>
@@ -555,9 +555,9 @@ export default function GLLPage() {
                 17-year exclusive partnership with Tsai Hsing School in Taipei.
               </h2>
               <p className="text-blue-100 body-lg mb-8">
-                Since 2009, Banyan has delivered daily live sessions to Taipei
+                Since 2008, Banyan has delivered daily live sessions to Taipei
                 students in grades 5–8.
-                Alumni at NYU, University of Washington, and Ohio State. GLL has taken
+                Alumni at Northwestern, NYU, Georgetown, University of Michigan, and more. GLL has taken
                 that model and made it available to any school, anywhere.
               </p>
               <Link href="/programs/learning-live" className="btn btn-white btn-lg">

@@ -31,8 +31,8 @@ const values = [
   },
   {
     icon: Users,
-    title: 'Educator-centered, always',
-    body: "Every program we build starts with one question: what does the teacher need to make this work? If it doesn't serve educators, it won't reach students.",
+    title: 'Built for the classroom',
+    body: "Great programs don't just inspire students — they have to be realistic for the teacher running them. Everything we design starts with the question: will this actually work in a real classroom, on a real schedule?",
   },
   {
     icon: Lightbulb,
@@ -42,12 +42,12 @@ const values = [
   {
     icon: Award,
     title: 'Authentic over performative',
-    body: 'We believe in real relationships with real partners. Our international connections in Taiwan and China are built on years of trust, not just vendor agreements.',
+    body: 'We believe in real relationships with real partners. Our international connections are built on years of trust, not just vendor agreements.',
   },
   {
     icon: Heart,
     title: 'Long-term over transactional',
-    body: "We're not in the one-and-done PD business. Our most important relationships are the ones we've maintained for a decade — districts, schools, and partners who've grown alongside us.",
+    body: "We don't disappear after the workshop. From ongoing AI governance support to multi-year program partnerships, our most important relationships are the ones we've maintained for a decade — districts, schools, and partners who've grown alongside us.",
   },
 ]
 
@@ -60,11 +60,11 @@ const team = [
     initials: 'SF',
   },
   {
-    name: 'Courtney Dayhuff',
+    name: 'Courtney Pederson',
     title: 'Director of International Programs',
     bio: 'Courtney oversees Banyan\'s international partnerships in China and Taiwan, managing the relationships that power Global Learning Live and the virtual exchange programs that connect American students to real classrooms across the Pacific.',
     photo: null, // Replace with: '/team/courtney-dayhuff.jpg'
-    initials: 'CD',
+    initials: 'CP',
   },
   {
     name: 'Travis Moyer',
@@ -152,15 +152,14 @@ export default function AboutPage() {
                   Built on the belief that every student deserves a window to the world.
                 </h2>
                 <p className="body-lg text-neutral-600 mb-5">
-                  Banyan Global Learning was founded 17 years ago by Seth Fleischauer with a
-                  straightforward conviction: that the most powerful learning doesn&apos;t happen
-                  in isolation — it happens in encounter. Encounter with different cultures,
-                  different perspectives, different ways of seeing the world.
+                  Banyan Global Learning was founded 17 years ago by Seth Fleischauer with a conviction 
+                  that the most powerful learning doesn't happen in isolation, it happens in encounter: 
+                  with different cultures, different perspectives, and different ways of seeing the world.
                 </p>
                 <p className="body-md text-neutral-500 mb-5">
-                  What started as a program to bring global voices into U.S. classrooms has grown
+                  What started as a program to bring global voices into classrooms has grown
                   into a full suite of live, expert-led learning experiences — virtual field trips
-                  to Taiwan, live cultural exchanges with Chinese schools, AI professional
+                  to international locations, live cultural exchanges between students, AI professional
                   development for district leadership, and custom programs that meet schools where
                   they are and take them somewhere new.
                 </p>
@@ -180,8 +179,8 @@ export default function AboutPage() {
                 >
                   <div className="text-5xl text-blue-300 font-display leading-none mb-4">&ldquo;</div>
                   <p className="body-lg text-blue-50 italic leading-relaxed mb-6">
-                    The most transformative learning happens when students encounter real people,
-                    real places, and real perspectives — not textbook versions of them.
+                    Learning is most meaningful when students connect what they learn to real people, 
+                    real places, and real contexts.
                   </p>
                   <div className="text-blue-300 text-sm font-semibold">
                     — Seth Fleischauer, Founder &amp; President
@@ -191,7 +190,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-5">
                     <div className="text-[#0e4a83] font-display font-bold text-2xl mb-1">Global</div>
-                    <div className="text-neutral-500 text-sm">Partnerships in Asia, partnerships in the U.S.</div>
+                    <div className="text-neutral-500 text-sm">Partnerships in Asia, Europe and the Americas</div>
                   </div>
                   <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-5">
                     <div className="text-[#0e4a83] font-display font-bold text-2xl mb-1">Live</div>
@@ -249,8 +248,8 @@ export default function AboutPage() {
                 Small team. Deep expertise.
               </h2>
               <p className="body-md text-neutral-500">
-                Banyan is a lean, intentional team — which means every person is close to the
-                work and every relationship with a school or district gets genuine attention.
+                Banyan is led by a core team of four — each close to the work, each 
+                genuinely invested in the schools and districts we serve.
               </p>
             </div>
 

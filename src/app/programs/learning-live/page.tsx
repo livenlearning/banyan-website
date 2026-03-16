@@ -27,33 +27,33 @@ import {
 export const metadata: Metadata = {
   title: 'Learning Live — Banyan\'s 17-Year Taipei Partnership',
   description:
-    'Since 2009, Banyan has delivered daily live sessions to Tsai Hsing Elementary School in Taipei, Taiwan. Over 5,000 students and alumni at NYU, UW, and Ohio State.',
+    'Since 2008, Banyan has delivered daily live sessions to Tsai Hsing Elementary School in Taipei, Taiwan. Over 5,000 students and alumni at NYU, UW, and Ohio State.',
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const stats = [
   { number: '17', suffix: ' years', label: 'of uninterrupted daily live sessions' },
-  { number: '5,000', suffix: '+', label: 'students have moved through the program' },
-  { number: '1 → 8', suffix: '', label: 'classrooms, grown from a single pilot' },
+  { number: '6,000', suffix: '+', label: 'students have moved through the program' },
+  { number: '1 → 8', suffix: '', label: 'classrooms running synchronously, grown from a single pilot' },
   { number: '15', suffix: '', label: 'alumni universities: NYU, Georgetown, Northwestern — and more' },
 ]
 
 const timeline = [
   {
     year: '2008',
-    title: 'The Spark. One Classroom, One Camera.',
-    body: 'Learning Live launches with a single 5th grade classroom in Taipei, connecting students to a live educator in the U.S. Through nothing more than a camera and a shared passion for learning, a new model of global education is born.',
+    title: 'The Spark: One Classroom, One Camera.',
+    body: 'Learning Live launches with a single 5th grade classroom in Taipei, connecting students to a live educator in the U.S. through nothing more than a camera and a shared passion for learning. A new model of global education is born.',
   },
   {
-    year: '2009',
+    year: '2009-2011',
     title: 'Expanding Across Grade Levels',
     body: 'Learning Live is added to Grades 6, 7, and 8, creating a comprehensive middle school program that builds students&apos; skills and confidence over multiple years.',
   },
   {
     year: '2010',
     title: 'First International Collaboration',
-    body: 'Tsai Hsing students receive a special award at New York&apos;s Lego Robotics competition after collaborating with a team from Locust Valley High School. This marks the beginning of a series of international collaborations that become a hallmark of the program.',
+    body: 'Tsai Hsing students receive a special award at New York\'s Lego Robotics competition after collaborating with a team from Locust Valley High School. This marks the beginning of a series of international collaborations that become a hallmark of the program.',
   },
   {
     year: '2011',
@@ -63,7 +63,7 @@ const timeline = [
   {
     year: '2014',
     title: 'Collaboration at Scale',
-    body: 'The program expands to serve over 500 students across multiple grade levels. Banyan builds a robust curriculum aligned to linguistic, digital, and cultural competencies. Learning Live becomes a signature of Tsai Hsing&apos;s academic identity.',
+    body: 'The program expands to serve over 500 students across multiple grade levels. Banyan builds a robust curriculum aligned to linguistic, digital, and cultural competencies. Learning Live becomes a signature of Tsai Hsing\'s academic identity.',
   },
   {
     year: '2017',
@@ -71,7 +71,7 @@ const timeline = [
     body: 'Building on its success in middle school, Learning Live introduces the Bridges curriculum for Kindergarten through Grade 4, fostering curiosity and global awareness from a young age.',
   },
   {
-    year: '2019',
+    year: '2018',
     title: 'A Decade of Impact',
     body: 'Learning Live marks its 10th anniversary, having served over 2,000 students. Parents cite the program as a key factor in choosing Tsai Hsing. Students showcase their skills in international competitions and collaborations with elite schools like Menlo.',
   },
@@ -110,7 +110,7 @@ const outcomes = [
     bg: 'bg-gold-50',
     title: 'Academic growth and lifelong impact',
     body: 'With high attendance, high participation, and high engagement, the outcomes of the Learning Live program can be seen long after the students leave the classroom. Alumni who go through Learning Live in 5th grade arrive at international universities with the confidence, communication skills, and global perspective their peers are still building.',
-    detail: 'Alumni accepted to NYU, University of Washington, UC Santa Barbara, Ohio State, Stony Brook, and top international high schools and universities across Asia and the West.',
+    detail: 'Alumni accepted to Northwestern, Georgetown, NYU, the University of Washington, and top international high schools and universities across Asia and the West.',
   },
 ]
 
@@ -156,7 +156,7 @@ export default function LearningLivePage() {
               <div className="flex flex-wrap items-center gap-3 mb-7">
                 <span className="badge badge-white">Learning Live</span>
                 <span className="text-amber-100 text-sm font-medium">
-                  Est. 2009 · Exclusive partnership · Not enrolling
+                  Est. 2008 · Exclusive partnership · Not enrolling
                 </span>
               </div>
 
@@ -167,7 +167,7 @@ export default function LearningLivePage() {
               </h1>
 
               <p className="body-lg text-amber-100 mb-5 max-w-2xl">
-                Since 2009, Banyan has delivered daily live virtual sessions to
+                Since 2008, Banyan has delivered daily live virtual sessions to
                 Tsai Hsing School in Taipei, Taiwan — one of the city&apos;s
                 most esteemed private institutions. It is the longest
                 running daily live virtual learning program in K–12 education.
@@ -218,7 +218,7 @@ export default function LearningLivePage() {
                 </div>
                 <div>
                   <div className="text-amber-300 text-xs font-semibold uppercase tracking-wide">Partnership since</div>
-                  <div className="text-white font-display font-semibold">2009 · Grades 5–8</div>
+                  <div className="text-white font-display font-semibold">2008 · Grades 5–8</div>
                 </div>
               </div>
             </div>
@@ -371,7 +371,7 @@ export default function LearningLivePage() {
                 Three kinds of lasting change
               </h2>
               <p className="body-lg text-neutral-600">
-                The outcomes of Learning Live weren&apos;t measured at the end of a
+                The outcomes of Learning Live weren&apos;t just measured at the end of a
                 semester. They compounded over years — visible in alumni university
                 placements, parent enrollment decisions, and students who arrived at
                 international settings already knowing how to show up in the world.
@@ -414,7 +414,7 @@ export default function LearningLivePage() {
             <div className="text-center max-w-xl mx-auto mb-16">
               <p className="section-label mb-4">The timeline</p>
               <h2 className="display-md text-neutral-900 mb-4">
-                Seventeen years built one year at a time
+                Seventeen years<br />built one year at a time
               </h2>
               <p className="body-md text-neutral-600">
                 There&apos;s no shortcut to a 17-year track record. This is how it
@@ -471,12 +471,11 @@ export default function LearningLivePage() {
                 <GraduationCap className="text-gold-400" size={26} />
               </div>
               <h2 className="display-md text-white mb-5">
-                The students who went through this program are now in college.
+                The students who went through this program are now in college and beyond.
               </h2>
               <p className="body-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
                 The first cohort of Tsai Hsing students who learned English through
-                Learning Live are now adults. Some arrived at NYU. Some at the
-                University of Washington. Some at Ohio State. All of them arrived
+                Learning Live are now adults. Some arrived at prestigious universities. All of them arrived
                 already knowing how to talk to people who aren&apos;t like them — which
                 is the skill the program was designed to build.
               </p>
@@ -535,7 +534,7 @@ export default function LearningLivePage() {
                     because students ask to come back.
                   </p>
                   <p>
-                    The program delivered what Tsai Hsing had asked for in 2009:
+                    The program delivered what Tsai Hsing had asked for in 2008:
                     students who could move
                     through the world with confidence, curiosity, and the capacity
                     to connect across difference.
@@ -549,7 +548,7 @@ export default function LearningLivePage() {
                 <div className="mt-8 flex flex-wrap gap-6">
                   {[
                     { icon: TrendingUp, label: 'Tsai Hsing enjoys enrollment at capacity' },
-                    { icon: Lightbulb, label: 'Daily sessions, uninterrupted since 2009' },
+                    { icon: Lightbulb, label: 'Daily sessions, uninterrupted since 2008' },
                     { icon: Users, label: 'Parents cite it as a key school-choice factor' },
                   ].map((item, i) => {
                     const Icon = item.icon
