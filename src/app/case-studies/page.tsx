@@ -98,7 +98,7 @@ export default function CaseStudiesPage() {
               ].map((s) => (
                 <div key={s.label}>
                   <div className="stat-number text-[#0e4a83]">{s.value}</div>
-                  <div className="text-sm text-neutral-500 mt-1">{s.label}</div>
+                  <div className="text-sm text-neutral-600 mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -127,7 +127,7 @@ export default function CaseStudiesPage() {
                     {c.stats.map((s) => (
                       <div key={s.label} className="p-4 text-center">
                         <div className="text-2xl font-bold font-display text-[#0e4a83]">{s.value}</div>
-                        <div className="text-xs text-neutral-500 mt-1 leading-tight">{s.label}</div>
+                        <div className="text-xs text-neutral-600 mt-1 leading-tight">{s.label}</div>
                       </div>
                     ))}
                   </div>
@@ -136,7 +136,7 @@ export default function CaseStudiesPage() {
                   <div className="p-8 flex flex-col gap-6 flex-1">
                     {/* Challenge */}
                     <div>
-                      <div className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">The Challenge</div>
+                      <div className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-2">The Challenge</div>
                       <p className="text-neutral-600 text-sm leading-relaxed">{c.challenge}</p>
                     </div>
 
@@ -145,7 +145,7 @@ export default function CaseStudiesPage() {
                       <p className="text-neutral-700 italic text-sm leading-relaxed">
                         &ldquo;{c.quote.text}&rdquo;
                       </p>
-                      <cite className="not-italic text-xs text-neutral-400 mt-2 block">— {c.quote.attribution}</cite>
+                      <cite className="not-italic text-xs text-neutral-500 mt-2 block">— {c.quote.attribution}</cite>
                     </blockquote>
 
                     {/* CTA */}

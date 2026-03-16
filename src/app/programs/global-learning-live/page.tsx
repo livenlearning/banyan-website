@@ -184,7 +184,7 @@ export default function GLLPage() {
         {/* ── CORE MECHANISM ───────────────────────────────────────────── */}
         <section className="bg-neutral-50 border-b border-neutral-200">
           <div className="container-site py-16">
-            <p className="text-center text-neutral-500 text-sm font-semibold tracking-widest uppercase mb-10">
+            <p className="text-center text-neutral-600 text-sm font-semibold tracking-widest uppercase mb-10">
               The experience arc
             </p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 max-w-4xl mx-auto">
@@ -199,7 +199,7 @@ export default function GLLPage() {
                     {item.step}
                   </div>
                   <div className="font-display font-bold text-neutral-900 text-lg mb-1">{item.label}</div>
-                  <div className="text-neutral-500 text-sm leading-snug">{item.sub}</div>
+                  <div className="text-neutral-600 text-sm leading-snug">{item.sub}</div>
                   {i < 3 && (
                     <div className="hidden lg:block absolute" />
                   )}
@@ -302,11 +302,11 @@ export default function GLLPage() {
                 <div className="absolute bottom-5 left-5 right-5 flex gap-3">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
                     <div className="font-display font-extrabold text-teal-600 text-2xl leading-none">1</div>
-                    <div className="text-neutral-500 text-xs mt-0.5">class period</div>
+                    <div className="text-neutral-600 text-xs mt-0.5">class period</div>
                   </div>
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
                     <div className="font-display font-extrabold text-teal-600 text-2xl leading-none">Live</div>
-                    <div className="text-neutral-500 text-xs mt-0.5">human-facilitated</div>
+                    <div className="text-neutral-600 text-xs mt-0.5">human-facilitated</div>
                   </div>
                 </div>
               </div>
@@ -479,7 +479,7 @@ export default function GLLPage() {
                       <Icon className="text-teal-500" size={18} />
                     </div>
                     <div>
-                      <div className="text-xs text-neutral-500 font-semibold uppercase tracking-wide mb-1">
+                      <div className="text-xs text-neutral-600 font-semibold uppercase tracking-wide mb-1">
                         {item.label}
                       </div>
                       <div className="font-display font-bold text-neutral-900 text-base">
@@ -495,7 +495,7 @@ export default function GLLPage() {
             <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-neutral-200 shadow-sm p-8 text-center">
               <div className="stat-number text-teal-500 mb-2">~$1,000</div>
               <div className="text-neutral-700 font-medium text-lg mb-1">per classroom, per cycle</div>
-              <p className="text-neutral-500 text-sm mb-6">
+              <p className="text-neutral-600 text-sm mb-6">
                 <span className="block">Includes all facilitation, curriculum, partner matching, and scheduling.</span>
                 <span className="block">Volume pricing available for schools running multiple classrooms.</span>
               </p>
@@ -521,7 +521,7 @@ export default function GLLPage() {
                   faces — they stop performing and start actually engaging with each other.
                   That&apos;s rare.
                 </p>
-                <footer className="text-neutral-500 text-sm">
+                <footer className="text-neutral-600 text-sm">
                   <strong className="text-neutral-700 not-italic">Pilot Program Teacher</strong>
                   {' '}— Early GLL Cohort, 2025
                 </footer>
@@ -535,7 +535,7 @@ export default function GLLPage() {
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="stat-number text-teal-500">{stat.number}</div>
-                    <div className="text-neutral-500 text-sm mt-1 max-w-[140px]">{stat.label}</div>
+                    <div className="text-neutral-600 text-sm mt-1 max-w-[140px]">{stat.label}</div>
                   </div>
                 ))}
               </div>

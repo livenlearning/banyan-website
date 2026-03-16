@@ -100,7 +100,7 @@ function ContactFormInner() {
         <h3 className="font-display font-semibold text-neutral-900 text-xl mb-3">
           Message received!
         </h3>
-        <p className="text-neutral-500 text-sm max-w-sm">
+        <p className="text-neutral-600 text-sm max-w-sm">
           Thanks for reaching out. We&apos;ll get back to you at <strong>{fields.email || 'your email'}</strong> within one business day.
         </p>
       </div>
@@ -228,7 +228,7 @@ function ContactFormInner() {
         )}
       </button>
 
-      <p className="text-neutral-400 text-xs text-center">
+      <p className="text-neutral-500 text-xs text-center">
         We typically respond within one business day.
       </p>
     </form>

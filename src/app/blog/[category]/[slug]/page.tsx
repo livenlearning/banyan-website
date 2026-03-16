@@ -142,14 +142,14 @@ export default async function CategorizedBlogPostPage({
           <div className="container-site max-w-3xl mx-auto">
             <Link
               href={`/blog`}
-              className="inline-flex items-center gap-2 text-neutral-400 hover:text-[#0e4a83] text-sm mb-2 transition-colors"
+              className="inline-flex items-center gap-2 text-neutral-500 hover:text-[#0e4a83] text-sm mb-2 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               All posts
             </Link>
 
             {/* Breadcrumb hint */}
-            <p className="text-xs text-neutral-400 mb-6">{sectionLabel}</p>
+            <p className="text-xs text-neutral-500 mb-6">{sectionLabel}</p>
 
             {post.categories?.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
@@ -166,12 +166,12 @@ export default async function CategorizedBlogPostPage({
             </h1>
 
             {post.excerpt && (
-              <p className="text-xl text-neutral-500 leading-relaxed mb-6">
+              <p className="text-xl text-neutral-600 leading-relaxed mb-6">
                 {post.excerpt}
               </p>
             )}
 
-            <div className="flex items-center gap-2 text-sm text-neutral-400">
+            <div className="flex items-center gap-2 text-sm text-neutral-500">
               <Calendar className="w-4 h-4" />
               <span>Banyan Global Learning · {formatDate(post.publishedAt)}</span>
             </div>
@@ -207,7 +207,7 @@ export default async function CategorizedBlogPostPage({
               <div className="font-display font-semibold text-neutral-900 text-lg mb-1">
                 Ready to bring these ideas to your classroom?
               </div>
-              <p className="text-neutral-500 text-sm">
+              <p className="text-neutral-600 text-sm">
                 Explore Banyan&apos;s programs for K–12 schools and districts.
               </p>
             </div>

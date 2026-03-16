@@ -130,7 +130,7 @@ export default function AboutPage() {
                     style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)' }}>
                     {stat.number}
                   </div>
-                  <div className="text-neutral-500 text-sm leading-snug max-w-[160px] mx-auto">
+                  <div className="text-neutral-600 text-sm leading-snug max-w-[160px] mx-auto">
                     {stat.label}
                   </div>
                 </div>
@@ -156,14 +156,14 @@ export default function AboutPage() {
                   that the most powerful learning doesn't happen in isolation, it happens in encounter: 
                   with different cultures, different perspectives, and different ways of seeing the world.
                 </p>
-                <p className="body-md text-neutral-500 mb-5">
+                <p className="body-md text-neutral-600 mb-5">
                   What started as a program to bring global voices into classrooms has grown
                   into a full suite of live, expert-led learning experiences — virtual field trips
                   to international locations, live cultural exchanges between students, AI professional
                   development for district leadership, and custom programs that meet schools where
                   they are and take them somewhere new.
                 </p>
-                <p className="body-md text-neutral-500">
+                <p className="body-md text-neutral-600">
                   The name &ldquo;Banyan&rdquo; is intentional. The banyan tree doesn&apos;t grow straight up —
                   it spreads outward, sends down roots from its branches, and creates a canopy
                   wide enough for an entire community to gather under. That&apos;s what we&apos;re
@@ -190,11 +190,11 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-5">
                     <div className="text-[#0e4a83] font-display font-bold text-2xl mb-1">Global</div>
-                    <div className="text-neutral-500 text-sm">Partnerships in Asia, Europe and the Americas</div>
+                    <div className="text-neutral-600 text-sm">Partnerships in Asia, Europe and the Americas</div>
                   </div>
                   <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-5">
                     <div className="text-[#0e4a83] font-display font-bold text-2xl mb-1">Live</div>
-                    <div className="text-neutral-500 text-sm">Real-time connections, not recordings or simulations</div>
+                    <div className="text-neutral-600 text-sm">Real-time connections, not recordings or simulations</div>
                   </div>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                       <h3 className="font-display font-semibold text-neutral-900 text-lg mb-2">
                         {value.title}
                       </h3>
-                      <p className="text-neutral-500 text-sm leading-relaxed">
+                      <p className="text-neutral-600 text-sm leading-relaxed">
                         {value.body}
                       </p>
                     </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
               <h2 className="display-md text-neutral-900 mb-4">
                 Small team. Deep expertise.
               </h2>
-              <p className="body-md text-neutral-500">
+              <p className="body-md text-neutral-600">
                 Banyan is led by a core team of four — each close to the work, each 
                 genuinely invested in the schools and districts we serve.
               </p>
@@ -283,7 +283,7 @@ export default function AboutPage() {
                     <div className="text-[#0e4a83] text-sm font-medium mb-3">
                       {member.title}
                     </div>
-                    <p className="text-neutral-500 text-sm leading-relaxed">
+                    <p className="text-neutral-600 text-sm leading-relaxed">
                       {member.bio}
                     </p>
                   </div>
@@ -300,7 +300,7 @@ export default function AboutPage() {
               <h2 className="display-md text-neutral-900 mb-4">
                 Ready to bring the world to your students?
               </h2>
-              <p className="body-lg text-neutral-500 mb-8 max-w-xl mx-auto">
+              <p className="body-lg text-neutral-600 mb-8 max-w-xl mx-auto">
                 Whether you&apos;re looking for a single virtual field trip or a year-long
                 partnership, we&apos;d love to talk about what Banyan can build with your school
                 or district.

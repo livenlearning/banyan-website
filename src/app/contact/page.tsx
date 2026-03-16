@@ -55,7 +55,7 @@ export default function ContactPage() {
                 <h2 className="font-display font-semibold text-neutral-900 text-2xl mb-2">
                   Send us a message
                 </h2>
-                <p className="text-neutral-500 text-sm mb-8">
+                <p className="text-neutral-600 text-sm mb-8">
                   Tell us what you&apos;re looking for and we&apos;ll get back to you within one business day.
                 </p>
                 <ContactForm />
@@ -75,7 +75,7 @@ export default function ContactPage() {
                       <Mail className="text-[#0e4a83]" size={15} />
                     </div>
                     <div>
-                      <div className="text-neutral-500 text-xs font-semibold uppercase tracking-wider mb-0.5">
+                      <div className="text-neutral-600 text-xs font-semibold uppercase tracking-wider mb-0.5">
                         Email
                       </div>
                       <a
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       <Clock className="text-[#0e4a83]" size={15} />
                     </div>
                     <div>
-                      <div className="text-neutral-500 text-xs font-semibold uppercase tracking-wider mb-0.5">
+                      <div className="text-neutral-600 text-xs font-semibold uppercase tracking-wider mb-0.5">
                         Response time
                       </div>
                       <div className="text-neutral-700 text-sm">Within one business day</div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                       <MapPin className="text-[#0e4a83]" size={15} />
                     </div>
                     <div>
-                      <div className="text-neutral-500 text-xs font-semibold uppercase tracking-wider mb-0.5">
+                      <div className="text-neutral-600 text-xs font-semibold uppercase tracking-wider mb-0.5">
                         Based in
                       </div>
                       <div className="text-neutral-700 text-sm">United States · Serving schools worldwide</div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                           <div className="font-semibold text-neutral-800 text-sm mb-0.5">
                             {item.title}
                           </div>
-                          <div className="text-neutral-500 text-xs leading-relaxed">
+                          <div className="text-neutral-600 text-xs leading-relaxed">
                             {item.body}
                           </div>
                         </div>

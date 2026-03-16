@@ -140,7 +140,7 @@ export default function KennewickCaseStudyPage() {
                 </p>
               </div>
               <div className="space-y-4">
-                <div className="text-sm font-semibold uppercase tracking-widest text-neutral-400 mb-4">Key challenges</div>
+                <div className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-4">Key challenges</div>
                 {[
                   'Wide variance in teacher comfort — from AI skeptics to enthusiastic early adopters',
                   'Rising concerns around student misuse and academic integrity',
@@ -233,13 +233,13 @@ export default function KennewickCaseStudyPage() {
                     <p className="text-neutral-700 italic text-sm leading-relaxed">
                       &ldquo;These specific workflows have been helpful and I will implement them in my own AI work.&rdquo;
                     </p>
-                    <cite className="not-italic text-xs text-neutral-400 mt-2 block">— Experienced AI user</cite>
+                    <cite className="not-italic text-xs text-neutral-500 mt-2 block">— Experienced AI user</cite>
                   </blockquote>
                   <blockquote className="p-5 rounded-xl bg-neutral-50 border border-neutral-100 border-l-4 border-l-[#e5a025]">
                     <p className="text-neutral-700 italic text-sm leading-relaxed">
                       &ldquo;Yeah, I am more open to using AI for some tasks.&rdquo;
                     </p>
-                    <cite className="not-italic text-xs text-neutral-400 mt-2 block">— Former AI skeptic</cite>
+                    <cite className="not-italic text-xs text-neutral-500 mt-2 block">— Former AI skeptic</cite>
                   </blockquote>
                 </div>
               </div>

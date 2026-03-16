@@ -353,7 +353,7 @@ export default function LearningLivePage() {
                       It is now marketed by the school as a signature element of its
                       educational offering.&rdquo;
                     </p>
-                    <div className="text-neutral-400 text-xs">
+                    <div className="text-neutral-500 text-xs">
                       — From the Tsai Hsing case study, 2025
                     </div>
                   </div>
@@ -396,7 +396,7 @@ export default function LearningLivePage() {
                         {outcome.body}
                       </p>
                       <div className="pt-5 border-t border-neutral-100">
-                        <p className="text-neutral-500 text-xs leading-relaxed italic">
+                        <p className="text-neutral-600 text-xs leading-relaxed italic">
                           {outcome.detail}
                         </p>
                       </div>

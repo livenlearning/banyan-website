@@ -93,7 +93,7 @@ export default function BlogGrid({ posts }: { posts: PostSummary[] }) {
               {tab.label}
               <span className={[
                 'text-xs font-normal px-1.5 py-0.5 rounded-full',
-                active ? 'bg-white/20 text-white' : 'bg-neutral-100 text-neutral-400',
+                active ? 'bg-white/20 text-white' : 'bg-neutral-100 text-neutral-500',
               ].join(' ')}>
                 {counts[tab.id]}
               </span>
@@ -104,7 +104,7 @@ export default function BlogGrid({ posts }: { posts: PostSummary[] }) {
 
       {/* ── Post grid ───────────────────────────────────────────────── */}
       {filtered.length === 0 ? (
-        <div className="text-center py-24 text-neutral-400">
+        <div className="text-center py-24 text-neutral-500">
           No posts in this category yet.
         </div>
       ) : (
@@ -123,14 +123,14 @@ export default function BlogGrid({ posts }: { posts: PostSummary[] }) {
                   </Link>
                 </h2>
                 {post.excerpt && (
-                  <p className="text-neutral-500 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-neutral-600 text-sm leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
                 )}
               </div>
 
               <div className="p-6 pt-4 mt-auto flex items-center justify-between border-t border-neutral-100">
-                <div className="flex items-center gap-1.5 text-xs text-neutral-400">
+                <div className="flex items-center gap-1.5 text-xs text-neutral-500">
                   <Calendar className="w-3.5 h-3.5" />
                   {formatDate(post.publishedAt)}
                 </div>

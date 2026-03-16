@@ -170,7 +170,7 @@ export default function ProgramsPage() {
                             ))}
                           </div>
 
-                          <p className="text-neutral-400 text-xs font-semibold uppercase tracking-wide">
+                          <p className="text-neutral-500 text-xs font-semibold uppercase tracking-wide">
                             {program.audience}
                           </p>
                         </div>
@@ -186,7 +186,7 @@ export default function ProgramsPage() {
                           </Link>
                           <Link
                             href={`/programs/${program.slug}`}
-                            className="btn btn-ghost btn-lg justify-center text-neutral-500 hover:text-neutral-700 hover:bg-neutral-100"
+                            className="btn btn-ghost btn-lg justify-center text-neutral-600 hover:text-neutral-700 hover:bg-neutral-100"
                           >
                             Learn more
                           </Link>

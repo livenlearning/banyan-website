@@ -271,7 +271,7 @@ export default function VirtualFieldTripsPage() {
         {/* ── HOW IT WORKS ─────────────────────────────────────────────── */}
         <section className="bg-neutral-50 border-b border-neutral-200 py-16">
           <div className="container-site">
-            <p className="text-center text-neutral-500 text-xs font-semibold tracking-widest uppercase mb-12">
+            <p className="text-center text-neutral-600 text-xs font-semibold tracking-widest uppercase mb-12">
               How it works
             </p>
             <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
@@ -290,7 +290,7 @@ export default function VirtualFieldTripsPage() {
                     <h3 className="font-display font-bold text-neutral-900 text-base mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed">{step.body}</p>
+                    <p className="text-neutral-600 text-sm leading-relaxed">{step.body}</p>
                   </div>
                 )
               })}
@@ -371,7 +371,7 @@ export default function VirtualFieldTripsPage() {
 
                   {/* Pillar CTA + note */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4">
-                    <p className="text-neutral-400 text-sm italic max-w-lg">{pillar.note}</p>
+                    <p className="text-neutral-500 text-sm italic max-w-lg">{pillar.note}</p>
                     <Link
                       href={`/contact?program=vft&pillar=${pillar.id}`}
                       className="btn btn-primary btn-md shrink-0"
@@ -488,7 +488,7 @@ export default function VirtualFieldTripsPage() {
 
               {/* 15-year credibility line */}
               <div className="text-center">
-                <p className="body-md text-neutral-500">
+                <p className="body-md text-neutral-600">
                   Built on 15+ years of live virtual programming experience —
                   the same practitioner depth behind Banyan&apos;s{' '}
                   <Link href="/programs/learning-live" className="text-blue-600 hover:underline font-medium">

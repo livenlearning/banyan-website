@@ -160,7 +160,7 @@ export default function TsaiHsingCaseStudyPage() {
                   { label: 'Partnership since', value: '2009' },
                 ].map((f) => (
                   <div key={f.label} className="p-4 bg-neutral-50 rounded-xl border border-neutral-100">
-                    <div className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">{f.label}</div>
+                    <div className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-1">{f.label}</div>
                     <div className="text-neutral-800 font-medium text-sm">{f.value}</div>
                   </div>
                 ))}
@@ -280,7 +280,7 @@ export default function TsaiHsingCaseStudyPage() {
               <div className="flex flex-col md:flex-row gap-8 items-center p-10 rounded-2xl bg-neutral-50 border border-neutral-100">
                 <Award className="w-16 h-16 text-[#e5a025] flex-shrink-0" />
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">Recognition</div>
+                  <div className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-2">Recognition</div>
                   <h3 className="font-display font-semibold text-neutral-900 text-xl mb-2">CILC Pinnacle Award</h3>
                   <p className="text-neutral-600 text-sm leading-relaxed">
                     The Center for Interactive Learning and Collaboration awarded Banyan Global
@@ -293,7 +293,7 @@ export default function TsaiHsingCaseStudyPage() {
 
               {/* Alumni */}
               <div className="mt-8 text-center">
-                <div className="text-sm font-semibold uppercase tracking-widest text-neutral-400 mb-4">Alumni accepted to</div>
+                <div className="text-sm font-semibold uppercase tracking-widest text-neutral-500 mb-4">Alumni accepted to</div>
                 <div className="flex flex-wrap justify-center gap-3">
                   {['New York University (NYU)', 'University of Washington', 'Ohio State University'].map((u) => (
                     <span key={u} className="badge badge-blue">{u}</span>

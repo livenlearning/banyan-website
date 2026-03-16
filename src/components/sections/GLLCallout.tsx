@@ -82,7 +82,7 @@ export default function GLLCallout() {
             </div>
 
             <div className="mt-7 pt-7 border-t border-neutral-200">
-              <p className="text-sm text-neutral-500">
+              <p className="text-sm text-neutral-600">
                 Currently piloting ·{' '}
                 <strong className="text-neutral-700">Cohorts of ~4 classrooms</strong>{' '}
                 · Ages 10–14 · ~$1,000 / classroom / cycle
@@ -111,7 +111,7 @@ export default function GLLCallout() {
                 ✓
               </div>
               <div>
-                <p className="text-xs text-neutral-500 leading-none mb-1">Schools re-enroll</p>
+                <p className="text-xs text-neutral-600 leading-none mb-1">Schools re-enroll</p>
                 <p className="font-display font-bold text-neutral-900 text-sm leading-none">
                   Cycle after cycle
                 </p>
