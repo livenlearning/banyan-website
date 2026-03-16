@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Globe, Brain, Star, Map } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ProductsGrid
@@ -18,9 +19,8 @@ const products = [
     details: ['4-week cycles', '~4 classrooms/cohort', 'Ages 10–14', '~$1,000 / cycle'],
     cta: 'Enroll your classroom',
     btnClass: 'btn-teal',
-    // Card header gradient + emoji
     headerGradient: 'linear-gradient(135deg, #07524b 0%, #1ca59d 100%)',
-    headerEmoji: '🌍',
+    headerIcon: Globe,
     headerLabel: 'Global Learning Live',
   },
   {
@@ -36,7 +36,7 @@ const products = [
     cta: 'Request a proposal',
     btnClass: 'btn-primary',
     headerGradient: 'linear-gradient(135deg, #0b3b69 0%, #0e4a83 100%)',
-    headerEmoji: '🤖',
+    headerIcon: Brain,
     headerLabel: 'AI Professional Development',
   },
   {
@@ -52,7 +52,7 @@ const products = [
     cta: 'Read the case study',
     btnClass: 'btn-gold',
     headerGradient: 'linear-gradient(135deg, #7e4908 0%, #e5a025 100%)',
-    headerEmoji: '⭐',
+    headerIcon: Star,
     headerLabel: 'Learning Live',
   },
   {
@@ -68,7 +68,7 @@ const products = [
     cta: 'Book a session',
     btnClass: 'btn-outline',
     headerGradient: 'linear-gradient(135deg, #1a4a7a 0%, #4586c3 100%)',
-    headerEmoji: '🗺️',
+    headerIcon: Map,
     headerLabel: 'Virtual Field Trips',
   },
 ]
@@ -96,17 +96,20 @@ export default function ProductsGrid() {
                 className="relative h-32 flex flex-col items-center justify-center overflow-hidden"
                 style={{ background: product.headerGradient }}
               >
-                {/* Large background emoji for texture */}
-                <span
-                  className="absolute -bottom-3 -right-2 text-8xl opacity-20 select-none"
+                {/* Large background icon for texture */}
+                <product.headerIcon
+                  className="absolute -bottom-4 -right-4 opacity-10 text-white"
+                  size={120}
+                  strokeWidth={1}
                   aria-hidden="true"
-                >
-                  {product.headerEmoji}
-                </span>
-                {/* Foreground emoji */}
-                <span className="text-4xl mb-1 relative z-10" aria-hidden="true">
-                  {product.headerEmoji}
-                </span>
+                />
+                {/* Foreground icon */}
+                <product.headerIcon
+                  className="text-white mb-2 relative z-10"
+                  size={48}
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
                 {/* Badge */}
                 <span className="badge badge-white relative z-10 text-[10px] px-2 py-0.5">
                   {product.badgeLabel}
