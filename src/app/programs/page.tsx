@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
-import { ArrowRight, Globe, Cpu, BookOpen, MapPin } from 'lucide-react'
+import { ArrowRight, Globe, BookOpen, MapPin } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Programs Index Page
@@ -12,7 +12,7 @@ import { ArrowRight, Globe, Cpu, BookOpen, MapPin } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Programs — Live Global Learning for K–12 Classrooms',
   description:
-    'Explore all Banyan Global Learning programs: Global Learning Live, AI Professional Development, Learning Live, and Virtual Field Trips.',
+    'Explore all Banyan Global Learning programs: Global Learning Live, Learning Live, and Virtual Field Trips.',
 }
 
 const programs = [
@@ -33,24 +33,6 @@ const programs = [
     cta: 'Enroll your classroom',
     ctaClass: 'btn-teal',
     details: ['4-week cycles', 'Live facilitation', '40–50 min/week', 'International cohorts'],
-  },
-  {
-    slug: 'ai-pd',
-    badge: 'District programs',
-    badgeClass: 'badge-blue',
-    accentClass: 'bg-blue-600',
-    heroClass: 'hero-aipd',
-    icon: Cpu,
-    iconBg: 'bg-blue-50',
-    iconColor: 'text-blue-600',
-    name: 'AI Professional Development',
-    tagline: 'Practical AI literacy for every educator.',
-    description:
-      'District-wide AI professional development grounded in pedagogy, not hype. Helps educators understand, evaluate, and integrate AI tools in ways that actually improve student outcomes.',
-    audience: 'District administrators · Curriculum directors · $25K–$50K',
-    cta: 'Request a proposal',
-    ctaClass: 'btn-primary',
-    details: ['District-wide rollout', 'Pedagogy-grounded', 'Measurable outcomes', 'Kennewick case study'],
   },
   {
     slug: 'learning-live',
@@ -113,9 +95,9 @@ export default function ProgramsPage() {
               <span className="text-gradient-gold">global learner</span>
             </h1>
             <p className="body-lg text-blue-100 max-w-2xl mx-auto">
-              From 4-week international cohorts to district-wide AI professional
-              development — Banyan builds programs that connect classrooms to the world
-              in ways that actually stick.
+              From 4-week international cohorts to single-session virtual field trips
+              — Banyan builds programs that connect classrooms to the world in ways
+              that actually stick.
             </p>
           </div>
         </section>
@@ -150,7 +132,6 @@ export default function ProgramsPage() {
                           </h2>
                           <p className={`text-sm font-semibold mb-4 ${
                             program.slug === 'global-learning-live' ? 'text-teal-500' :
-                            program.slug === 'ai-pd' ? 'text-blue-600' :
                             program.slug === 'learning-live' ? 'text-gold-500' :
                             'text-blue-400'
                           }`}>

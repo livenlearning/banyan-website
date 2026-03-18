@@ -8,7 +8,7 @@ import { ArrowRight, Globe, Users, Lightbulb, Award, Heart } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About — Banyan Global Learning',
   description:
-    'For 17 years, Banyan Global Learning has connected K–12 classrooms to the world through live, expert-led global experiences, AI professional development, and authentic learning partnerships.',
+    'For 17 years, Banyan Global Learning has connected K–12 classrooms to the world through live, expert-led global experiences and authentic learning partnerships.',
   alternates: { canonical: 'https://banyangloballearning.com/about' },
   openGraph: {
     title: 'About — Banyan Global Learning',
@@ -37,7 +37,7 @@ const values = [
   {
     icon: Lightbulb,
     title: 'Practical over theoretical',
-    body: 'Elegant ideas mean nothing if they break down in third period. Everything we design — from virtual field trips to AI governance frameworks — has to work in actual classrooms, with real students.',
+    body: 'Elegant ideas mean nothing if they break down in third period. Everything we design — from virtual field trips to international cohort programs — has to work in actual classrooms, with real students.',
   },
   {
     icon: Award,
@@ -47,7 +47,7 @@ const values = [
   {
     icon: Heart,
     title: 'Long-term over transactional',
-    body: "We don't disappear after the workshop. From ongoing AI governance support to multi-year program partnerships, our most important relationships are the ones we've maintained for a decade — districts, schools, and partners who've grown alongside us.",
+    body: "We don't disappear after the session. From multi-year program partnerships to ongoing support, our most important relationships are the ones we've maintained for a decade — districts, schools, and partners who've grown alongside us.",
   },
 ]
 
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 { number: '17+', label: 'Years connecting classrooms to the world' },
                 { number: '10K+', label: 'Students reached through live programs' },
                 { number: '20+', label: 'Countries represented in our content' },
-                { number: '100%', label: 'Of Kennewick teachers rated the PD valuable' },
+                { number: 'CILC', label: 'Pinnacle Award for distance learning' },
               ].map((stat, i) => (
                 <div key={i}>
                   <div className="font-display font-extrabold text-[#0e4a83] mb-1"
@@ -159,9 +159,8 @@ export default function AboutPage() {
                 <p className="body-md text-neutral-600 mb-5">
                   What started as a program to bring global voices into classrooms has grown
                   into a full suite of live, expert-led learning experiences — virtual field trips
-                  to international locations, live cultural exchanges between students, AI professional
-                  development for district leadership, and custom programs that meet schools where
-                  they are and take them somewhere new.
+                  to international locations, live cultural exchanges between students, and custom
+                  programs that meet schools where they are and take them somewhere new.
                 </p>
                 <p className="body-md text-neutral-600">
                   The name &ldquo;Banyan&rdquo; is intentional. The banyan tree doesn&apos;t grow straight up —

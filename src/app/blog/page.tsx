@@ -42,11 +42,11 @@ export default async function BlogIndexPage() {
           <div className="container-site text-center">
             <span className="section-label text-blue-200 mb-4 block">Blog</span>
             <h1 className="display-xl text-white mb-4">
-              Ideas for educators.{' '}
+              Ideas for educators.<br />
               <span className="text-gradient-gold">From educators.</span>
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Insights on AI in education, global learning, digital citizenship,
+              Insights on AI in education, global learning, digital citizenship,<br />
               and the future of the K–12 classroom.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default async function BlogIndexPage() {
               Want to see these ideas in action?
             </h2>
             <p className="text-neutral-600 mb-8 max-w-lg mx-auto">
-              Explore Banyan&apos;s programs — from AI PD for districts to live global connections for classrooms.
+              Explore Banyan&apos;s programs — live global connections for classrooms of every size.
             </p>
             <Link href="/programs" className="btn btn-primary btn-lg">
               Explore our programs

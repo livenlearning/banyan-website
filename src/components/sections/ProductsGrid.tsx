@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Globe, Brain, Star, Map } from 'lucide-react'
+import { Globe, Star, Map } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ProductsGrid
@@ -22,22 +22,6 @@ const products = [
     headerGradient: 'linear-gradient(135deg, #07524b 0%, #1ca59d 100%)',
     headerIcon: Globe,
     headerLabel: 'Global Learning Live',
-  },
-  {
-    id: 'aipd',
-    badge: 'badge-blue',
-    badgeLabel: 'Enterprise',
-    href: '/programs/ai-pd',
-    name: 'AI Professional Development',
-    tagline: 'District-wide AI literacy for educators',
-    description:
-      "A comprehensive PD program that equips teachers and administrators with practical AI literacy — grounded in pedagogy, not just tools.",
-    details: ['Custom scope', 'District-level', 'Facilitator training', 'From $25,000'],
-    cta: 'Request a proposal',
-    btnClass: 'btn-primary',
-    headerGradient: 'linear-gradient(135deg, #0b3b69 0%, #0e4a83 100%)',
-    headerIcon: Brain,
-    headerLabel: 'AI Professional Development',
   },
   {
     id: 'll',
@@ -82,12 +66,12 @@ export default function ProductsGrid() {
         <div className="text-center mb-14">
           <p className="section-label mb-3">Our Programs</p>
           <h2 className="display-md text-neutral-900 max-w-2xl mx-auto text-balance">
-            Four ways to bring the world to your students
+            Three ways to bring the world to your students
           </h2>
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {products.map((product) => (
             <div key={product.id} className="card flex flex-col">
 

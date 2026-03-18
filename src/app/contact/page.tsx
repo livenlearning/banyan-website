@@ -38,8 +38,8 @@ export default function ContactPage() {
                 <span className="text-gradient-gold">what we can build together.</span>
               </h1>
               <p className="body-lg text-blue-100 max-w-xl">
-                Whether you&apos;re exploring a single virtual field trip or a district-wide AI
-                governance engagement — we&apos;re happy to have the conversation.
+                Whether you&apos;re exploring a single virtual field trip or a multi-week
+                international exchange — we&apos;re happy to have the conversation.
               </p>
             </div>
           </div>
@@ -155,20 +155,6 @@ export default function ContactPage() {
                   </ol>
                 </div>
 
-                {/* AI PD specific note */}
-                <div
-                  className="rounded-2xl p-6 border border-blue-200"
-                  style={{ background: 'linear-gradient(135deg, #eff6ff, #f0fdfa)' }}
-                >
-                  <div className="text-[#0e4a83] text-xs font-semibold uppercase tracking-wider mb-2">
-                    AI Governance inquiry?
-                  </div>
-                  <p className="text-neutral-600 text-sm leading-relaxed">
-                    All AI Governance engagements begin with a complimentary 90-minute Readiness
-                    Workshop. Select &ldquo;AI Governance Readiness Workshop&rdquo; from the dropdown —
-                    no obligation, no pitch until we know the fit is right.
-                  </p>
-                </div>
 
               </div>
             </div>

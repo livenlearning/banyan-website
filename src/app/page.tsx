@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Banyan Global Learning — The world, inside your classroom.',
   description:
     'Live, expert-led programs connecting K–12 classrooms to the world. ' +
-    'Global Learning Live, AI Professional Development, and more.',
+    'Global Learning Live, Learning Live, Virtual Field Trips, and more.',
 }
 
 export default function HomePage() {
@@ -37,7 +37,6 @@ export default function HomePage() {
         <ImpactStats />
 
         {/* TODO: CaseStudyTeaser — pull 1–2 case study cards */}
-        {/* TODO: AIPDCallout — enterprise CTA for AI PD program */}
         {/* TODO: NewsletterCTA or ContactCTA — bottom of page conversion */}
       </main>
 

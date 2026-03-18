@@ -8,7 +8,6 @@ import Image from 'next/image'
 
 const programs = [
   { label: 'Global Learning Live', href: '/programs/global-learning-live' },
-  { label: 'AI Professional Development', href: '/programs/ai-pd' },
   { label: 'Learning Live', href: '/programs/learning-live' },
   { label: 'Virtual Field Trips', href: '/programs/virtual-field-trips' },
 ]

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
-import { ArrowRight, BookOpen, Users, Award, TrendingUp, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, BookOpen, Users, Award, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Case Studies — Banyan Global Learning',
@@ -11,32 +11,6 @@ export const metadata: Metadata = {
 }
 
 const cases = [
-  {
-    slug: 'kennewick',
-    program: 'AI Professional Development',
-    programColor: 'badge-blue',
-    accentColor: 'bg-[#0e4a83]',
-    borderColor: 'border-[#0e4a83]',
-    accentBar: 'bg-[#0e4a83]',
-    tagline: 'District-wide AI PD that converted skeptics to practitioners.',
-    org: 'Kennewick School District',
-    location: 'Kennewick, WA',
-    type: 'Public School District',
-    heroGradient: 'from-[#070b12] via-[#0e2a50] to-[#0e4a83]',
-    stats: [
-      { value: '100%', label: 'Said PD was a valuable use of time' },
-      { value: '100%', label: 'Gained strategies they could apply immediately' },
-      { value: '100%', label: 'More likely to use AI tools next year' },
-    ],
-    quote: {
-      text: 'These specific workflows have been helpful and I will implement them in my own AI work.',
-      attribution: 'Kennewick educator — experienced AI user',
-    },
-    challenge:
-      'KSD serves students across four school models — traditional, project-based, virtual, and juvenile justice. As AI tools entered classrooms, district leaders needed policy-aligned PD that met teachers where they actually were, from skeptics to early adopters.',
-    icon: TrendingUp,
-    ctaLabel: 'Read the full case study',
-  },
   {
     slug: 'tsai-hsing',
     program: 'Learning Live',
@@ -80,7 +54,7 @@ export default function CaseStudiesPage() {
               <span className="text-gradient-gold">Real results.</span>
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Banyan has been doing this since 2008. These are two of the partnerships that show
+              Banyan has been doing this since 2008. This is a partnership that shows
               what&apos;s possible when global learning is done with intention.
             </p>
           </div>
@@ -108,7 +82,7 @@ export default function CaseStudiesPage() {
         {/* ── Case study cards ─────────────────────────────────────────── */}
         <section className="section-padding bg-neutral-50">
           <div className="container-site">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-2xl mx-auto">
               {cases.map((c) => (
                 <article
                   key={c.slug}
@@ -189,7 +163,7 @@ export default function CaseStudiesPage() {
               Ready to be the next story?
             </h2>
             <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">
-              Whether you&apos;re enrolling a classroom or building a district-wide AI strategy,
+              Whether you&apos;re enrolling a classroom or booking a virtual field trip,
               Banyan has a program built for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

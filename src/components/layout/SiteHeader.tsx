@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
-import { Menu, X, ChevronDown, Globe, Cpu, BookOpen, MapPin } from 'lucide-react'
+import { Menu, X, ChevronDown, Globe, BookOpen, MapPin } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SiteHeader — sticky nav with Programs dropdown + mobile drawer
@@ -20,16 +20,6 @@ const programs = [
     sub: 'Live international cohort program',
     badge: 'Enrolling',
     badgeClass: 'bg-teal-100 text-teal-700',
-  },
-  {
-    href: '/programs/ai-pd',
-    icon: Cpu,
-    iconBg: 'bg-blue-50',
-    iconColor: 'text-blue-600',
-    name: 'AI Professional Development',
-    sub: 'District-wide AI literacy for educators',
-    badge: null,
-    badgeClass: '',
   },
   {
     href: '/programs/learning-live',

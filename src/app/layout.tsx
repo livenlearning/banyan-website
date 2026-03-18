@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   description:
     'Live, expert-led programs that connect K–12 classrooms to the world. ' +
-    'Global Learning Live, AI Professional Development, Learning Live, and Virtual Field Trips.',
+    'Global Learning Live, Learning Live, and Virtual Field Trips.',
   metadataBase: new URL('https://banyangloballearning.com'),
   openGraph: {
     siteName: 'Banyan Global Learning',
