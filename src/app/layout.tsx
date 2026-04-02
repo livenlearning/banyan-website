@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 // ── FONTS ────────────────────────────────────────────────────────────────────
@@ -55,6 +56,20 @@ export default function RootLayout({
       className={`${displayFont.variable} ${bodyFont.variable}`}
       // next/font injects --font-display-var and --font-body-var on <html>
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R5DM7RKS1R"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R5DM7RKS1R');
+          `}
+        </Script>
+      </head>
       <body className="font-body text-base text-neutral-900 bg-white antialiased">
         {children}
       </body>
