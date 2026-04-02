@@ -79,10 +79,10 @@ export default function ContactPage() {
                         Email
                       </div>
                       <a
-                        href="mailto:info@banyangloballearning.com"
+                        href="mailto:programs@banyangloballearning.com"
                         className="text-[#0e4a83] text-sm hover:underline"
                       >
-                        info@banyangloballearning.com
+                        programs@banyangloballearning.com
                       </a>
                     </div>
                   </div>
