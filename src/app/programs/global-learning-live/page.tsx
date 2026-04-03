@@ -507,6 +507,214 @@ export default function GLLPage() {
           </div>
         </section>
 
+        {/* ── SCHOOL YEAR TIMELINE ──────────────────────────────────────── */}
+        <section className="section-padding">
+          <div className="container-site">
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <p className="section-label mb-4">School year at a glance</p>
+              <h2 className="display-md text-neutral-900 mb-4">
+                Four units. One school year.
+              </h2>
+              <p className="body-lg text-neutral-600">
+                Each GLL unit runs 4 weeks and follows the same awe-driven arc.
+                Together they form a full-year sequence — but schools can enter at
+                any point or select individual units.
+              </p>
+            </div>
+
+            {/* ── Desktop horizontal timeline ─────────────────────────────── */}
+            <div className="hidden lg:block max-w-5xl mx-auto mb-10">
+              {/* Timeline bar */}
+              <div className="relative flex items-stretch">
+                {/* Continuous track */}
+                <div className="absolute top-1/2 left-0 right-0 h-1 -translate-y-1/2">
+                  <div className="flex h-full">
+                    {/* Aug–Nov segment */}
+                    <div className="flex-[4] bg-teal-300 rounded-l-full" />
+                    {/* Winter break gap */}
+                    <div className="flex-[2] border-t-2 border-dashed border-neutral-300 self-center h-0" />
+                    {/* Feb–May segment */}
+                    <div className="flex-[4] bg-teal-300 rounded-r-full" />
+                  </div>
+                </div>
+
+                {/* Unit cards laid out across the track */}
+                <div className="relative grid grid-cols-[1fr_1fr_0.8fr_1fr_1fr] w-full gap-0">
+                  {/* ── Festivals ── */}
+                  <div className="flex flex-col items-center text-center px-2">
+                    <div className="card p-5 w-full border-t-4 border-teal-400 mb-4">
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        Festivals
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        Aug &ndash; Sep
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        &ldquo;How do communities celebrate who they are?&rdquo;
+                      </p>
+                    </div>
+                    <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-teal-100 z-10" />
+                  </div>
+
+                  {/* ── Murals ── */}
+                  <div className="flex flex-col items-center text-center px-2">
+                    <div className="card p-5 w-full border-t-4 border-teal-500 mb-4">
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        Murals
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        Oct &ndash; Nov
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        &ldquo;What stories do communities paint on their walls — and why?&rdquo;
+                      </p>
+                    </div>
+                    <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-teal-100 z-10" />
+                  </div>
+
+                  {/* ── Winter break spacer ── */}
+                  <div className="flex flex-col items-center justify-end pb-1">
+                    <span className="text-neutral-400 text-xs font-medium tracking-wide uppercase mb-3">
+                      Winter break
+                    </span>
+                    <div className="w-3 h-3 rounded-full bg-neutral-300 z-10" />
+                  </div>
+
+                  {/* ── Local Legends ── */}
+                  <div className="flex flex-col items-center text-center px-2">
+                    <div className="card p-5 w-full border-t-4 border-teal-600 mb-4">
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        Local Legends
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        Feb &ndash; Mar
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        &ldquo;Whose stories shape our communities — and whose are missing?&rdquo;
+                      </p>
+                    </div>
+                    <div className="w-4 h-4 rounded-full bg-teal-600 ring-4 ring-teal-100 z-10" />
+                  </div>
+
+                  {/* ── Gathering Spaces ── */}
+                  <div className="flex flex-col items-center text-center px-2">
+                    <div className="card p-5 w-full border-t-4 border-teal-700 mb-4">
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        Gathering Spaces
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        Apr &ndash; May
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        &ldquo;Why do people come together — and what do those spaces say about us?&rdquo;
+                      </p>
+                    </div>
+                    <div className="w-4 h-4 rounded-full bg-teal-700 ring-4 ring-teal-100 z-10" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ── Mobile vertical timeline ────────────────────────────────── */}
+            <div className="lg:hidden max-w-md mx-auto mb-10">
+              <div className="relative pl-8">
+                {/* Vertical track line */}
+                <div className="absolute left-[9px] top-0 bottom-0 w-0.5 bg-teal-200" />
+
+                {[
+                  {
+                    name: 'Festivals',
+                    dates: 'Aug \u2013 Sep',
+                    question: '\u201cHow do communities celebrate who they are?\u201d',
+                    borderColor: 'border-teal-400',
+                    dotColor: 'bg-teal-400',
+                  },
+                  {
+                    name: 'Murals',
+                    dates: 'Oct \u2013 Nov',
+                    question: '\u201cWhat stories do communities paint on their walls \u2014 and why?\u201d',
+                    borderColor: 'border-teal-500',
+                    dotColor: 'bg-teal-500',
+                  },
+                ].map((unit, i) => (
+                  <div key={i} className="relative mb-6">
+                    <div className="absolute -left-8 top-5 w-5 h-5 rounded-full ring-4 ring-teal-100 z-10" style={{}} >
+                      <div className={`w-full h-full rounded-full ${unit.dotColor}`} />
+                    </div>
+                    <div className={`card p-5 border-l-4 ${unit.borderColor}`}>
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        {unit.name}
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        {unit.dates}
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        {unit.question}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Winter break indicator */}
+                <div className="relative mb-6 pl-2">
+                  <div className="absolute -left-8 top-2 w-5 flex items-center justify-center z-10">
+                    <div className="w-3 h-3 rounded-full bg-neutral-300" />
+                  </div>
+                  <p className="text-neutral-400 text-xs font-medium tracking-wide uppercase py-3">
+                    Winter break
+                  </p>
+                </div>
+
+                {[
+                  {
+                    name: 'Local Legends',
+                    dates: 'Feb \u2013 Mar',
+                    question: '\u201cWhose stories shape our communities \u2014 and whose are missing?\u201d',
+                    borderColor: 'border-teal-600',
+                    dotColor: 'bg-teal-600',
+                  },
+                  {
+                    name: 'Gathering Spaces',
+                    dates: 'Apr \u2013 May',
+                    question: '\u201cWhy do people come together \u2014 and what do those spaces say about us?\u201d',
+                    borderColor: 'border-teal-700',
+                    dotColor: 'bg-teal-700',
+                  },
+                ].map((unit, i) => (
+                  <div key={i} className="relative mb-6 last:mb-0">
+                    <div className="absolute -left-8 top-5 w-5 h-5 rounded-full ring-4 ring-teal-100 z-10">
+                      <div className={`w-full h-full rounded-full ${unit.dotColor}`} />
+                    </div>
+                    <div className={`card p-5 border-l-4 ${unit.borderColor}`}>
+                      <h3 className="font-display font-bold text-neutral-900 text-lg mb-1">
+                        {unit.name}
+                      </h3>
+                      <p className="text-teal-600 text-xs font-semibold tracking-wide uppercase mb-2">
+                        {unit.dates}
+                      </p>
+                      <p className="text-neutral-600 text-sm leading-snug italic">
+                        {unit.question}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Flexibility note */}
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="inline-flex items-start gap-3 bg-teal-50 border border-teal-200 rounded-xl px-6 py-4 text-left">
+                <Calendar className="text-teal-500 shrink-0 mt-0.5" size={20} />
+                <p className="text-neutral-700 text-sm leading-relaxed">
+                  <strong className="text-neutral-900">Flexible entry.</strong>{' '}
+                  Schools can enter at any point in the sequence or select individual
+                  units that fit their curriculum calendar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── TESTIMONIAL PLACEHOLDER ──────────────────────────────────── */}
         <section className="section-padding">
           <div className="container-site">
