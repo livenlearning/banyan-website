@@ -14,15 +14,16 @@ export async function generateStaticParams() {
   const slugs = await getAllPostSlugs()
   return slugs
     .filter((slug) => !POST_CATEGORIES[slug])
-    .map((slug) => ({ slug }))
+    .map((slug) => ({ slug: [slug] }))
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string[] }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { slug: slugParts } = await params
+  const slug = slugParts[0]
   const post = await getPostBySlug(slug)
   if (!post) return { title: 'Post not found' }
 
@@ -115,9 +116,10 @@ const ptComponents = {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string[] }>
 }) {
-  const { slug } = await params
+  const { slug: slugParts } = await params
+  const slug = slugParts[0]
 
   // If this slug belongs to a category, send to the canonical categorized URL
   const cat = POST_CATEGORIES[slug]
