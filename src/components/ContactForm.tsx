@@ -4,9 +4,14 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 
-// ── Service options ──────────────────────────────────────────────────────────
+// ── Service options (kept in sync with the AI PD page's CTA hrefs) ────────────
 const SERVICE_OPTIONS = [
   { value: '', label: 'What can we help with?' },
+  { value: 'readiness-workshop', label: 'AI Governance Readiness Workshop (free)' },
+  { value: 'governance-audit', label: 'AI Governance Audit ($15K–$25K)' },
+  { value: 'implementation-blueprint', label: 'AI Implementation Blueprint ($25K–$50K)' },
+  { value: 'advisory-retainer', label: 'Strategic Advisory Retainer' },
+  { value: 'self-assessment', label: 'Request the 5-Layer Self-Assessment Tool' },
   { value: 'global-learning-live', label: 'Global Learning Live' },
   { value: 'virtual-field-trips', label: 'Virtual Field Trips' },
   { value: 'learning-live', label: 'Learning Live' },
