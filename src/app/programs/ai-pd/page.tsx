@@ -540,7 +540,7 @@ export default function AIPDPage() {
                     every paid engagement.
                   </p>
                   <p className="text-blue-300 text-xs">
-                    No card. No consultant call. The PDF lands in your inbox in under 2 minutes.
+                    No card. No consultant call. The PDF lands in your inbox within 48 hours.
                   </p>
                 </div>
                 <Link
@@ -883,7 +883,7 @@ export default function AIPDPage() {
                     </h3>
                     <p className="text-blue-100 text-sm leading-relaxed mb-6">
                       Free. 10 minutes. Personalized 2-page PDF auto-delivered to
-                      your inbox in under two minutes.
+                      your inbox within 48 hours.
                     </p>
                   </div>
                   <Link href="/programs/ai-pd/snapshot" className="btn btn-primary btn-lg w-full justify-center">

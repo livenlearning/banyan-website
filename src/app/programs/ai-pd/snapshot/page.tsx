@@ -109,7 +109,7 @@ export default function SnapshotPage() {
                   <li className="flex items-start gap-3">
                     <Mail className="text-blue-400 shrink-0 mt-0.5" size={16} />
                     <span className="text-neutral-300 text-sm leading-relaxed">
-                      Personalized PDF report lands in your inbox in under 2 minutes
+                      Personalized PDF report lands in your inbox within 48 hours
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
