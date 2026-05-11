@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
+import DiscoveryCallCTA from '@/components/DiscoveryCallCTA'
 import {
   ArrowRight,
   CheckCircle2,
   Shield,
   BookOpen,
-  Cpu,
   Settings,
   Server,
   AlertTriangle,
@@ -29,7 +29,14 @@ import {
 export const metadata: Metadata = {
   title: 'AI Governance for K–12 Districts — Banyan Global Learning',
   description:
-    'The 5-Layer AI Governance Framework for K–12 school districts. Governance audits, implementation blueprints, and strategic advisory — built for superintendents and district leadership teams.',
+    'A 5-tier AI governance service line for K–12 districts: free Readiness Snapshot, $3,500 Readiness Scan, $15–25K Audit, $25–50K Blueprint, and ongoing Strategic Advisory Retainer. Anchored on the 5-Layer Framework with the Cognitive Core at the center.',
+  openGraph: {
+    title: 'AI Governance for K–12 Districts — Banyan Global Learning',
+    description:
+      'A 5-tier AI governance service line for K–12 districts. Free Readiness Snapshot, $3,500 Scan, $15–25K Audit, $25–50K Blueprint, and Strategic Advisory Retainer.',
+    url: 'https://banyangloballearning.com/programs/ai-pd',
+    type: 'website',
+  },
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -120,11 +127,32 @@ const layers = [
 
 const tiers = [
   {
+    name: 'AI Readiness Scan',
+    price: '$3,500',
+    timeline: '2 weeks',
+    badge: 'New',
+    badgeClass: 'bg-amber-900/60 text-amber-200',
+    description:
+      'Productized maturity diagnostic. Your leadership team takes the deeper paid Snapshot, joins a 60-minute facilitated Scoring Workshop with Travis, and receives a third-party-validated maturity baseline plus three high-priority focus areas — in two weeks, for under $5,000.',
+    deliverables: [
+      'Deeper 5-Layer Snapshot intake (paid version, more granular)',
+      '60-min Leadership Scoring Workshop (live, facilitated)',
+      '8–10 page Scan Report with maturity rating per layer and Top 3 Focus Areas',
+      '30-min closeout call',
+      'One templated starter artifact (district picks from menu)',
+    ],
+    caption:
+      'Best fit: districts whose leadership has a sense of where they are on AI governance and want a third-party-reviewed baseline before committing to deeper work. Director-discretionary spend in most districts — no board action required.',
+    cta: 'Request a Readiness Scan',
+    ctaHref: '/contact?service=readiness-scan',
+    highlight: false,
+  },
+  {
     name: 'AI Governance Audit',
     price: '$15K–$25K',
     timeline: '4–6 weeks',
-    badge: 'Most common entry point',
-    badgeClass: 'bg-blue-800 text-blue-200',
+    badge: '',
+    badgeClass: '',
     description:
       'A structured diagnostic across all five layers. We assess where your district stands, map the gaps, and deliver a prioritized action plan your leadership team can act on immediately.',
     deliverables: [
@@ -134,6 +162,8 @@ const tiers = [
       'Board-ready executive summary',
       'Implementation roadmap outline',
     ],
+    caption:
+      'Goes deeper than the Scan: stakeholder interviews beyond leadership, custom recommendations with implementation steps, and a board-ready executive summary.',
     cta: 'Request an Audit',
     ctaHref: '/contact?service=governance-audit',
     highlight: false,
@@ -284,8 +314,8 @@ export default function AIPDPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/contact?service=governance-audit" className="btn btn-primary btn-xl">
-                  Request a proposal
+                <Link href="/programs/ai-pd/snapshot" className="btn btn-primary btn-xl">
+                  Take the Readiness Snapshot
                   <ArrowRight size={20} />
                 </Link>
                 <Link href="#framework" className="btn btn-xl border border-neutral-600 text-neutral-300 hover:bg-white/5 hover:border-neutral-400">
@@ -452,9 +482,20 @@ export default function AIPDPage() {
                         </div>
 
                         {/* Description */}
-                        <p className="text-neutral-300 text-sm leading-relaxed lg:border-l lg:border-neutral-800 lg:pl-8">
-                          {layer.description}
-                        </p>
+                        <div className="text-neutral-300 text-sm leading-relaxed lg:border-l lg:border-neutral-800 lg:pl-8">
+                          <p>{layer.description}</p>
+                          {layer.featured && (
+                            <a
+                              href="/downloads/cognitive-integrity-rubric-grade8.pdf"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-teal-300 hover:text-teal-200 text-sm font-medium mt-3 group"
+                            >
+                              Preview the Cognitive Integrity Rubric
+                              <ChevronRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                            </a>
+                          )}
+                        </div>
 
                         {/* Sample questions */}
                         <div className="lg:border-l lg:border-neutral-800 lg:pl-8">
@@ -480,25 +521,36 @@ export default function AIPDPage() {
               })}
             </div>
 
-            {/* Self-assessment CTA */}
-            <div className="mt-10 rounded-xl border border-blue-800 bg-blue-950/40 p-7 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <div className="font-display font-bold text-white text-lg mb-1">
-                  Free: 5-Layer AI Governance Self-Assessment Tool
+            {/* Snapshot CTA */}
+            <div className="mt-10 rounded-2xl border border-blue-700 bg-blue-950/40 p-8 lg:p-10">
+              <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-start">
+                <div>
+                  <span className="text-blue-300 text-xs font-bold tracking-widest uppercase mb-3 block">
+                    Free
+                  </span>
+                  <div className="font-display font-bold text-white text-2xl mb-4">
+                    5-Layer AI Readiness Snapshot
+                  </div>
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-5 max-w-2xl">
+                    A 10-minute self-assessment built directly on the 5-Layer Framework.
+                    Your leadership team answers 25 statements across the five governance
+                    layers, plus four context questions. We auto-deliver a 2-page
+                    personalized report with your maturity rating per layer and three
+                    immediate priorities &mdash; the same instrument we use to anchor
+                    every paid engagement.
+                  </p>
+                  <p className="text-blue-300 text-xs">
+                    No card. No consultant call. The PDF lands in your inbox in under 2 minutes.
+                  </p>
                 </div>
-                <p className="text-blue-300 text-sm">
-                  A structured Excel-based diagnostic your leadership team can use to
-                  benchmark your current posture across all five layers. Built for
-                  superintendents, CTOs, and curriculum directors.
-                </p>
+                <Link
+                  href="/programs/ai-pd/snapshot"
+                  className="btn btn-white btn-lg shrink-0"
+                >
+                  Take the Snapshot
+                  <ArrowRight size={18} />
+                </Link>
               </div>
-              <Link
-                href="/contact?resource=self-assessment"
-                className="btn btn-white btn-lg shrink-0"
-              >
-                Request the tool
-                <ArrowRight size={18} />
-              </Link>
             </div>
           </div>
         </section>
@@ -514,13 +566,14 @@ export default function AIPDPage() {
                 Choose your level of engagement
               </h2>
               <p className="body-md text-neutral-400">
-                All engagements begin with a complimentary 90-minute AI Governance
-                Readiness Workshop — a diagnostic session that uses the 5-Layer
-                Framework to assess where your district stands.
+                Every engagement starts with the free{' '}
+                <Link href="/programs/ai-pd/snapshot" className="text-blue-300 hover:text-blue-200 underline underline-offset-2">5-Layer Snapshot</Link>
+                . From there, four levels of partnership &mdash; depending on how much you
+                want us in your district&apos;s room.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
               {tiers.map((tier, i) => (
                 <div
                   key={i}
@@ -533,11 +586,15 @@ export default function AIPDPage() {
                 >
                   {/* Header */}
                   <div className={`p-7 border-b ${tier.highlight ? 'border-blue-800' : 'border-neutral-700'}`}>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${tier.badgeClass}`}>
-                        {tier.badge}
-                      </span>
-                    </div>
+                    {tier.badge ? (
+                      <div className="flex items-center justify-between mb-4">
+                        <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${tier.badgeClass}`}>
+                          {tier.badge}
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="mb-4 h-[26px]" aria-hidden="true" />
+                    )}
                     <h3 className="font-display font-bold text-white text-xl mb-1">
                       {tier.name}
                     </h3>
@@ -579,6 +636,11 @@ export default function AIPDPage() {
                         </li>
                       ))}
                     </ul>
+                    {('caption' in tier && tier.caption) ? (
+                      <p className="text-neutral-500 text-xs leading-relaxed mt-5 pt-5 border-t border-neutral-800 italic">
+                        {tier.caption}
+                      </p>
+                    ) : null}
                   </div>
 
                   {/* CTA */}
@@ -680,7 +742,7 @@ export default function AIPDPage() {
           <div className="container-site">
             <div className="max-w-4xl mx-auto">
 
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-blue-900 flex items-center justify-center shrink-0">
                   <Award className="text-blue-400" size={20} />
                 </div>
@@ -692,6 +754,15 @@ export default function AIPDPage() {
                     Kennewick School District, WA
                   </div>
                 </div>
+              </div>
+
+              <div className="rounded-lg border border-neutral-700 bg-neutral-800/50 p-5 mb-10 text-sm text-neutral-400 leading-relaxed">
+                <strong className="text-neutral-200">A note on framing:</strong>{' '}
+                This engagement was an AI professional development workshop for
+                Kennewick teachers &mdash; adjacent to, but not the same as, the
+                Governance service line described above. We include it because the
+                underlying practitioner approach is what the Governance engagements
+                operationalize.
               </div>
 
               <div className="grid md:grid-cols-2 gap-10 items-start">
@@ -768,7 +839,7 @@ export default function AIPDPage() {
           </div>
         </section>
 
-        {/* ── READINESS WORKSHOP CTA ────────────────────────────────────── */}
+        {/* ── FINAL CTA — TWO WAYS TO BEGIN ─────────────────────────────── */}
         <section
           className="section-padding relative overflow-hidden"
           style={{ background: 'linear-gradient(160deg, #060b14 0%, #0e3460 60%, #0c2a52 100%)' }}
@@ -782,38 +853,65 @@ export default function AIPDPage() {
             }}
           />
           <div className="container-site relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
 
-              <div className="inline-flex items-center gap-2 bg-blue-900/50 border border-blue-700 rounded-full px-4 py-2 mb-8">
-                <Cpu className="text-blue-400" size={15} />
-                <span className="text-blue-300 text-sm font-medium">
-                  Start here: complimentary 90-minute session
-                </span>
+              <div className="text-center mb-12">
+                <p className="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-4">
+                  Start here
+                </p>
+                <h2 className="display-md text-white mb-5">
+                  Two ways to begin
+                </h2>
+                <p className="body-lg text-blue-100 max-w-2xl mx-auto">
+                  The cleanest start is the 5-Layer Snapshot &mdash; 10 minutes, free,
+                  your maturity baseline lands in your inbox. From there, a free
+                  30-minute discovery call is available if you&apos;d like to discuss
+                  your results before committing to a paid engagement.
+                </p>
               </div>
 
-              <h2 className="display-md text-white mb-6">
-                Schedule your AI Governance Readiness Workshop
-              </h2>
-              <p className="body-lg text-blue-100 mb-5 max-w-2xl mx-auto">
-                A structured 90-minute session with your leadership team — superintendent,
-                CTO, curriculum director — that uses the 5-Layer Framework to benchmark
-                your current posture and identify your highest-priority gaps.
-              </p>
-              <p className="text-blue-300 text-sm mb-12">
-                Complimentary. No obligation. No pitch until we know the fit is right.
-              </p>
+              <div className="grid md:grid-cols-2 gap-6">
 
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact?service=readiness-workshop" className="btn btn-primary btn-xl">
-                  Schedule your readiness workshop
-                  <ArrowRight size={20} />
-                </Link>
-                <Link href="/contact?resource=self-assessment" className="btn btn-xl border border-blue-700 text-blue-300 hover:bg-blue-900/30">
-                  Request the self-assessment tool
-                </Link>
+                {/* Primary CTA card — Snapshot */}
+                <div className="rounded-2xl border-2 border-blue-500 bg-blue-950/40 p-8 shadow-[0_0_40px_rgba(59,130,246,0.15)] flex flex-col">
+                  <div className="flex-1">
+                    <span className="text-blue-300 text-xs font-bold tracking-widest uppercase mb-3 block">
+                      Free · 10 minutes
+                    </span>
+                    <h3 className="font-display font-bold text-white text-xl mb-3 leading-tight">
+                      Take the 5-Layer AI Readiness Snapshot
+                    </h3>
+                    <p className="text-blue-100 text-sm leading-relaxed mb-6">
+                      Free. 10 minutes. Personalized 2-page PDF auto-delivered to
+                      your inbox in under two minutes.
+                    </p>
+                  </div>
+                  <Link href="/programs/ai-pd/snapshot" className="btn btn-primary btn-lg w-full justify-center">
+                    Take the Snapshot
+                    <ArrowRight size={17} />
+                  </Link>
+                </div>
+
+                {/* Secondary CTA card — Discovery call (gated) */}
+                <div className="rounded-2xl border border-blue-800 bg-blue-950/20 p-8 flex flex-col">
+                  <div className="flex-1">
+                    <span className="text-blue-400 text-xs font-bold tracking-widest uppercase mb-3 block">
+                      Free · 30 minutes
+                    </span>
+                    <h3 className="font-display font-bold text-white text-xl mb-3 leading-tight">
+                      Book a 30-minute discovery call
+                    </h3>
+                    <p className="text-blue-200 text-sm leading-relaxed mb-6">
+                      After the Snapshot, talk through your results with Travis.
+                      No obligation. No pitch until we know the fit.
+                    </p>
+                  </div>
+                  <DiscoveryCallCTA />
+                </div>
+
               </div>
 
-              <p className="text-neutral-500 text-xs mt-10">
+              <p className="text-center text-neutral-500 text-xs mt-10">
                 Engagements may be funded through Title II-A, Title IV-A, state AI grants, or general operating budget.
               </p>
             </div>

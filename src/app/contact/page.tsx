@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
 import ContactForm from '@/components/ContactForm'
@@ -164,9 +165,9 @@ export default function ContactPage() {
                     AI Governance inquiry?
                   </div>
                   <p className="text-neutral-600 text-sm leading-relaxed">
-                    All AI Governance engagements begin with a complimentary 90-minute Readiness
-                    Workshop. Select &ldquo;AI Governance Readiness Workshop&rdquo; from the dropdown —
-                    no obligation, no pitch until we know the fit is right.
+                    The cleanest start is the free <strong>5-Layer AI Readiness Snapshot</strong> &mdash; a
+                    10-minute self-assessment that auto-delivers a personalized 2-page maturity
+                    report to your inbox. <Link href="/programs/ai-pd/snapshot" className="text-[#0e4a83] hover:underline font-medium">Take it here</Link>, then come back to talk.
                   </p>
                 </div>
 

@@ -7,11 +7,11 @@ import { ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 // ── Service options (kept in sync with the AI PD page's CTA hrefs) ────────────
 const SERVICE_OPTIONS = [
   { value: '', label: 'What can we help with?' },
-  { value: 'readiness-workshop', label: 'AI Governance Readiness Workshop (free)' },
+  { value: 'readiness-snapshot', label: '5-Layer AI Readiness Snapshot (free)' },
+  { value: 'readiness-scan', label: 'AI Readiness Scan ($3,500)' },
   { value: 'governance-audit', label: 'AI Governance Audit ($15K–$25K)' },
   { value: 'implementation-blueprint', label: 'AI Implementation Blueprint ($25K–$50K)' },
   { value: 'advisory-retainer', label: 'Strategic Advisory Retainer' },
-  { value: 'self-assessment', label: 'Request the 5-Layer Self-Assessment Tool' },
   { value: 'global-learning-live', label: 'Global Learning Live' },
   { value: 'virtual-field-trips', label: 'Virtual Field Trips' },
   { value: 'learning-live', label: 'Learning Live' },
